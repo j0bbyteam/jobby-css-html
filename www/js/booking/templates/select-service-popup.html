@@ -1,0 +1,20 @@
+<div >
+    <div ng-hide="selectedService" class="row" ng-repeat="service in selected.services">
+        <div class="item" ng-click="pickService(serviceObj[service], selected)">
+            <span>{{serviceObj[service].name}}</span>
+            <span ng-show="selected.prime">${{serviceObj[service].prime}}</span>
+            <span ng-show="!selected.prime">${{serviceObj[service].regular}}</span>
+        </div>
+    </div>
+
+    <!--<div class="row" ng-show="timeslots.length > 0">-->
+        <!--<input ng-model="service.selectedDuration" type="range" name="volume" min={{service.duration}} max={{service.duration + timeslots.length * 30}} value={{service.duration}} step="30"> {{service.selectedDuration}}Minutes-->
+    <!--</div>-->
+    <div class="row" ng-repeat="time in timeslots track by $index">
+        <div style="padding: 0px" ng-click="continueBooking(selectedService, time, selected)" class="item ob-form-text ob-text-center ob-blue-color">Start Time: {{time.startslot | displayStartTimeFromIndex}}</div>
+    </div>
+
+    <div class="row">
+        {{serviceErrorMessage}}
+    </div>
+</div>

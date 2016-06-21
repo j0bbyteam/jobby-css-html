@@ -1,0 +1,74 @@
+<ion-view view-title="Select a Time">
+    <ion-nav-buttons side="right">
+        <a ng-click="openDatePicker()" class="button button-icon icon ion-calendar"></a>
+    </ion-nav-buttons>
+
+    <ion-content class="has-header ob-grey-bg">
+        <div class="ob-content">
+            <div class="ob-content">
+                <div class="ob-form">
+                    <div class="ob-form-row ob-form-flex-row">
+                        <time-picker class="ob-form-timepicker"
+                                     show-time-picker="false"
+                                     show-date-picker="false"
+                                     data-inc-icon-class="ion ion-chevron-up"
+                                     data-dec-icon-class="ion ion-chevron-down"></time-picker>
+                    </div>
+                    <div class="ob-form-row" ng-show="filtered.length > 0">
+                        <div class="ob-form-text ob-text-center">Suggested time slots:</div>
+                    </div>
+                    <div class="ob-form-row" ng-show="filtered.length <= 0">
+                        <div class="ob-form-text ob-text-center">No suggested time found</div>
+                    </div>
+                    <!--<div class="ob-form-row" ng-repeat="time in timeslots track by $index">-->
+                        <!--<div class="ob-form-text ob-text-center ob-blue-color">Start Time: {{time.startslot | displayStartTimeFromIndex}}</div>-->
+                        <!--<div class="ob-form-subrow ob-form-flex-row">-->
+                            <!--<div class="ob-form-text">${{time.rate || 50}}</div> &lt;!&ndash;ng-show="chosen[$index].prime"&ndash;&gt;-->
+                            <!--<div ng-show="time.status == 1" class="ob-form-button" ng-click="selectTime($index)">Selected</div>-->
+                            <!--<div ng-show="time.status == 0" class="ob-form-button" ng-click="selectTime($index)">Available</div>-->
+                        <!--</div>-->
+                        <!--<div class="ob-form-subrow ob-form-flex-row">-->
+                            <!--<div class="ob-form-text">-->
+                                <!--<span ng-repeat="item in time.services">-->
+                                    <!--{{serviceObj[item].name}}-->
+                                <!--</span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div class="ob-form-row" ng-repeat="slot in filtered track by $index" ng-show="slot.status == 0" ng-click="selectTime(slot)">
+                        <p class="ob-form-text ob-text-center" >
+                            <span style="font-size: 20px" ng-click="clickOnSlot(slot)">{{slot.start}} - {{slot.end}}</span>
+                            <span ng-show="slot.repeat">Repeat</span>
+                            <span ng-show="slot.repeat && slot.prime">|</span>
+                            <span ng-show="slot.prime">Prime Price: </span>
+
+                            <span style="float: right" ng-show="slot.status == -1">
+                                Not Open
+                                <i class="ion ion-close"></i>
+                            </span>
+                            <span style="float: right" ng-show="slot.status == 0">
+                                Available
+                                <i class="ion ion-ios-circle-outline"></i>
+                            </span>
+                            <span style="float: right" ng-show="slot.status == 1">
+                                Booked by {{slot.username}}
+                                <i class="ion ion-android-calendar"></i>
+                            </span>
+                        </p>
+                        <div class="ob-form-subrow ob-form-flex-row">
+                            <div class="ob-form-text">
+                                <span ng-repeat="item in slot.services">
+                                    {{serviceObj[item].name}}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<button class="ob-block-button ob-button-blue" ng-click="continueBooking()"><span ng-hide="loading">Continue</span><i ng-show="loading" class="icon ion-load-c"></i></button>-->
+
+                <!--<button class="ob-block-button ob-button-dark" ng-click="printTime()">Check Time</button>-->
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,26 @@
+<ion-modal-view class="ob-darktranslucent-bg">
+    <ion-header-bar class="ob-darkpurple-bg">
+        <h1 class="title ob-navbar-title">Select Gym</h1>
+        <div class="buttons">
+            <button ng-click="hideGymSelectionModal()" class="button button-icon">
+                <i class="icon ion-close ob-white-color"></i>
+            </button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="ob-list">
+            <div class="ob-list-emptytext"
+                 ng-show="gyms.length <= 0">No gyms found</div>
+            <div class="ob-list-row" ng-click="setGym(gym)" ng-repeat="gym in gyms">
+                <div class="ob-list-col-img">
+                    <img class="ob-list-img" src="{{gym.profilepic}}"/>
+                </div>
+                <div class="ob-list-col-flex">
+                    <div class="ob-list-text">{{gym.name}}</div>
+                    <div class="ob-list-subtext">{{gym.address}}</div>
+                    <div class="ob-list-subtext">{{gym.information}}</div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

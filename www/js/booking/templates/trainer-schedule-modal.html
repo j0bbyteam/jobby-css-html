@@ -1,0 +1,67 @@
+<ion-modal-view>
+    <ion-header-bar align-title="center" class="ob-darkpurple-bg">
+        <h1 class="title ob-navbar-title">{{edit.time | displayTime}}</h1>
+        <div class="buttons">
+            <button ng-click="closeScheduleModal()" class="button button-icon">
+                <i class="icon ion-close ob-white-color"></i>
+            </button>
+        </div>
+    </ion-header-bar>
+    <ion-content class="has-header ob-grey-bg">
+        <div class="ob-content">
+            <div class="ob-form">
+                <div class="ob-form-row ob-form-flex-row" ng-click="removeTimeSlot(edit.index)">
+                    <span class="ob-form-text">Remove this timeslot</span>
+                    <span class="ob-form-ionicon-container" ng-click="openScheduleModal($index, time)">
+                        <i class="icon ion-close ob-form-ionicon ob-color-red"></i>
+                    </span>
+                </div>
+                <div class="item item-toggle ob-form-toggle-container">
+                    <span ng-show="active[edit.index].prime">Prime Time</span>
+                    <span ng-hide="active[edit.index].prime">Off Time</span>
+                    <label class="toggle toggle-positive ob-form-toggle">
+                        <input type="checkbox" ng-model="active[edit.index].prime"/>
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div ng-show="active[edit.index].status == -1" class="ob-block-button ob-button-dark" ng-click="selectTime(edit.index)">Not Available</div>
+            <div ng-show="active[edit.index].status == 0" class="ob-block-button ob-button-blue" ng-click="selectTime(edit.index)">Available</div>
+            <div ng-show="active[edit.index].status == 1" class="ob-block-button ob-button-dark" ng-click="selectTime(edit.index)">Booked</div>
+            <div class="ob-form">
+                <div class="ob-form-row">
+                    <div class="ob-form-subrow">
+                        <span class="ob-form-text">Keep as
+                        <span class="ob-button-color-blue">Prime</span> |
+                        <span class="ob-button-color-darkblue">Off</span> |
+                        <span class="ob-button-color-dark">Not Available</span>
+                        </span>
+                    </div>
+                    <div class="ob-form-subrow">
+                        <div ng-class="getSelectedClass(rules[edit.index][1])" class="ob-form-button" ng-click="addRule(1)">Monday</div>
+                    </div>
+                    <div class="ob-form-subrow">
+                        <div ng-class="getSelectedClass(rules[edit.index][2])" class="ob-form-button" ng-click="addRule(2)">Tuesday</div>
+                    </div>
+                    <div class="ob-form-subrow">
+                        <div ng-class="getSelectedClass(rules[edit.index][3])" class="ob-form-button" ng-click="addRule(3)">Wednesday</div>
+                    </div>
+                    <div class="ob-form-subrow">
+                        <div ng-class="getSelectedClass(rules[edit.index][4])" class="ob-form-button" ng-click="addRule(4)">Thursday</div>
+                    </div>
+                    <div class="ob-form-subrow">
+                        <div ng-class="getSelectedClass(rules[edit.index][5])" class="ob-form-button" ng-click="addRule(5)">Friday</div>
+                    </div>
+                    <div class="ob-form-subrow">
+                        <div ng-class="getSelectedClass(rules[edit.index][6])" class="ob-form-button" ng-click="addRule(6)">Saturday</div>
+                    </div>
+                    <div class="ob-form-subrow">
+                        <div ng-class="getSelectedClass(rules[edit.index][0])" class="ob-form-button" ng-click="addRule(0)">Sunday</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

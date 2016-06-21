@@ -1,0 +1,46 @@
+<ion-view view-title="Create Request" cache-view="false">
+    <ion-content class="ob-page">
+        <div class="ob-content">
+            <div class="ob-form ob-form-light">
+                <div class="ob-form-row ob-form-flex-row">
+                    <scrolling-time-picker obj="obj" class="ob-form-timepicker"
+                                 minute-step="30"
+                                 show-time-picker="true"
+                                 show-date-picker="true">
+                    </scrolling-time-picker>
+                </div>
+                <div class="ob-form-row ob-form-flex-row">
+                    <span class="ob-form-prompt">Professional</span>
+                    <span class="ob-form-text">{{trainer.username}}</span>
+                </div>
+                <div class="ob-form-row ob-form-flex-row">
+                    <span class="ob-form-prompt">Duration</span>
+                    <span class="ob-form-text">{{newrequest.minutes}}min</span>
+                    <input class="ob-form-range" type="range" name="volume" min="0" max="120" step="30"
+                           ng-model="newrequest.minutes"/>
+                </div>
+                <div class="ob-form-row ob-form-flex-row" ng-click="openMap()">
+                    <span class="ob-form-prompt ob-form-prompt-flex">Select Location from Map</span>
+                    <span class="ob-form-icon ob-form-icon-rightarrow"></span>
+                </div>
+                <div class="ob-form-row ob-form-flex-row">
+                    <span class="ob-form-prompt">Location</span>
+                    <input class="ob-form-text-input" type="text"
+                           ng-model="newrequest.address" placeholder=""/>
+                </div>
+                <div class="ob-form-row ob-form-flex-row">
+                    <textarea class="ob-form-textarea ob-form-textarea-small"
+                              ng-model="newrequest.commentlocation"
+                              placeholder="Location Details"></textarea>
+                </div>
+
+                <div class="ob-form-row ob-form-flex-row">
+                    <textarea class="ob-form-textarea ob-form-textarea-small"
+                              ng-model="newrequest.message"
+                              placeholder="Message"></textarea>
+                </div>
+            </div>
+            <button class="ob-block-button ob-button-blue" ng-click="confirmRequest()">Send Requests</button>
+        </div>
+    </ion-content>
+</ion-view>

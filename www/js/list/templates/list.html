@@ -1,0 +1,107 @@
+<ion-view hide-nav-bar="true" cache-view="false" overflow-scroll=’true’>
+    <ion-content class="ob-grey-bg" style="background-image: url({{ img }}); background-size:cover;">
+        <div class="ob-content">
+            <div class="ob-header ob-map-header">
+                <div class="ob-header-status-bar"></div>
+                <div class="ob-header-nav-bar">
+                    <div class="ob-header-icon-container">
+                        <a class="button button-icon icon ion-ios-arrow-back button-dark ob-header-icon" href="#/menu/service-search"></a>
+                    </div>
+                    <div class="ob-header-flex-area">
+                        <div class="ob-bar-search-input-container">
+                            <i class="icon ion-search ob-bar-search-input-icon-left"></i>
+                            <input type="search" class="ob-bar-search-input" placeholder="ex. hot yoga, boxing"
+                                   ng-model="searchContainer.profession" ng-focus="onSearch()"  />
+                            <i class="icon ion-ios-close-outline ob-bar-search-input-icon-right"
+                               ng-click="clearSearch()"></i>
+                        </div>
+                    </div>
+                    <div class="ob-header-icon-container"
+                         ng-click="searchOnMap()"
+                         nav-transition="none">
+                        <span class="ob-header-icon">
+                            <i class="icon ion-ios-location light ob-header-icon-map"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="ob-map-header-bottom-white-line"></div>
+            </div><!--
+            <div class="ob-map-tabs">
+                <a class="ob-map-tab-item"
+                   ng-class="{'ob-map-tab-selected':header === 'Users'}"
+                   ng-click="clickontab('Users', $event)">&nbsp;Professionals&nbsp;</a>
+                <a class="ob-map-tab-item"
+                   ng-class="{'ob-map-tab-selected':header === 'Classes'}"
+                   ng-click="clickontab('Classes', $event)">Classes</a>
+
+              <a class="ob-map-tab-item"
+                   ng-class="{'ob-map-tab-selected':header === 'Events'}"
+                   ng-click="clickontab('Events', $event)">Events</a>
+            </div>
+            -->
+            <div class="ob-list ob-map-list">
+                <div class="ob-form-row ob-form-flex-row ob-map-radiusinput">
+                    <span class="ob-form-prompt">Search</span>
+                    <input ng-model="searchContainer.searchTerms" focus-me ng-change="searchChange(searchContainer.searchTerms)" />
+                </div>
+                <div class="ob-form-row ob-form-flex-row ob-map-radiusinput">
+                    <span class="ob-form-prompt">Search Radius</span>
+
+                    <select class="ob-form-select ob-form-select-xlarge"
+                            ng-model="searchContainer.radius" ng-change="radiusChange()">
+                        <option>5</option>
+                        <option>10</option>
+                        <option>15</option>
+                        <option>20</option>
+                        <option>30</option>
+                        <option>50</option>
+                    </select>
+                    <span class="ob-form-text">{{searchContainer.radius  | number:0}}km</span>
+                    <!--<input class="ob-form-range" type="range" name="volume" min="0" max="50"-->
+                           <!--ng-change="radiusChange()" ng-model="searchContainer.radius">-->
+                </div>
+                <div class="ob-form-row ob-form-flex-row ob-map-radiusinput">
+                    <span class="ob-form-prompt">Orderby</span>
+
+                    <select class="ob-form-select ob-form-select-xlarge"
+                            ng-model="searchContainer.predicate" ng-change="predicateChange(predicate)">
+                        <option value="distance">distance</option>
+                        <option value="numOfReviews">number of reviews</option>
+                        <option value="rating">rating</option>
+                        <option value="totalRating">popularity</option>
+                    </select>
+                </div>
+                <!--<div id="reactList"></div>-->
+                <a class="ob-list-row ob-map-list-row"
+                   ng-repeat="item in array | orderBy:predicate:reverse | filter:searchContainer.searchTerms | filter:searchContainer.profession track by $index"
+                   href="{{item.href}}">
+                    <div class="ob-list-col-img">
+                        <img class="ob-list-img" src="https://s3.amazonaws.com/com.onebody.profile/Users/{{item.$id | htmlEncode}}/profilepic.jpg"/>
+                    </div>
+                    <div class="ob-list-col-flex">
+                        <div class="ob-list-text">
+                            <span class="ob-list-text ob-blue-color">{{item.username}}{{item.name}}</span>
+                            <span class="ob-list-subtext">{{item.profession}}{{item.category.name}}</span>
+                            <span class="ob-list-text-soft">{{item.distance | number:1}}km</span>
+                        </div>
+                        <div class="ob-list-subtext" ng-show="$root.header != 'Events' && (item.sizes.numOfReviews == undefined || item.sizes.numOfReviews == 0)">
+                            No Ratings Yet
+                        </div>
+                        <div class="ob-list-stars" ng-show="item.sizes.numOfReviews >= 0">
+                            <img class="ob-list-star" src="img/professional-profile/blue-star-single.png"/>
+                            <img class="ob-list-star" ng-hide="item.sizes.rating/item.sizes.numOfReviews > 1.4" src="img/professional-profile/white-star-single.png"/>
+                            <img class="ob-list-star" ng-show="item.sizes.rating/item.sizes.numOfReviews > 1.4" src="img/professional-profile/blue-star-single.png"/>
+                            <img class="ob-list-star" ng-hide="item.sizes.rating/item.sizes.numOfReviews > 2.4" src="img/professional-profile/white-star-single.png"/>
+                            <img class="ob-list-star" ng-show="item.sizes.rating/item.sizes.numOfReviews > 2.4" src="img/professional-profile/blue-star-single.png"/>
+                            <img class="ob-list-star" ng-hide="item.sizes.rating/item.sizes.numOfReviews > 3.4" src="img/professional-profile/white-star-single.png"/>
+                            <img class="ob-list-star" ng-show="item.sizes.rating/item.sizes.numOfReviews > 3.4" src="img/professional-profile/blue-star-single.png"/>
+                            <img class="ob-list-star" ng-hide="item.sizes.rating/item.sizes.numOfReviews > 4.4" src="img/professional-profile/white-star-single.png"/>
+                            <img class="ob-list-star" ng-show="item.sizes.rating/item.sizes.numOfReviews > 4.4" src="img/professional-profile/blue-star-single.png"/>
+                            <span class="ob-list-subtext">{{item.sizes.numOfReviews}} reviews</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

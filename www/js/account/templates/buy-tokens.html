@@ -1,0 +1,32 @@
+<ion-view view-title="Buy Credits">
+    <ion-content class="ob-page">
+        <div class="ob-content buy-tokens-content-div">
+            <div class="ob-main-instructions ob-instructions-light">Select the number of credits to purchase</div>
+            <div class="ob-sub-instructions ob-instructions-light">You have <span class="text-bold">{{currentTokens}}</span> dollars left.</div>
+            <div class="purchase-credits-table">
+                <div class="purchase-credits-row" ng-repeat="item in bundles">
+                    <span class="purchase-credits-value">{{item.numberTokens}}</span>
+                    <!--<span class="purchase-credits-count">${{item.price}}</span>-->
+                    <span class="purchase-credits-plus-minus-container" ng-click="addBundle(item)">
+                        <span class="purchase-credits-plus-minus-white-background"></span>
+                        <i class="icon ion-plus-circled purchase-credits-plus"></i>
+                    </span>
+                    <span class="purchase-credits-plus-minus-container" ng-click="removeBundle(item)">
+                        <span class="purchase-credits-plus-minus-white-background"></span>
+                        <i class="icon ion-minus-circled purchase-credits-minus"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar class="purchase-credits-footer-button">
+        <span class="purchase-credits-value">{{totalTokens}}</span>
+        <span class="purchase-credits-total-text">Total ${{amount}}</span>
+        <span class="purchase-credits-buy-credits-text-container" ng-click="confirm()">
+            <span class="purchase-credits-buy-credits-text">Buy Credits</span>
+            <span class="purchase-credits-arrow"></span>
+        </span>
+    </ion-footer-bar>
+</ion-view>
+
+<!-- ng-click="clear()" -->

@@ -1,0 +1,42 @@
+<ion-view view-title="Settings">
+    <ion-content class="ob-page">
+        <div class="ob-content">
+            <div class="ob-form ob-form-light">
+                <div class="ob-form-row" ng-show="isIOS()">
+                    <ion-toggle ng-model="notif.checked"
+                                class="ob-form-toggle2"
+                                toggle-class="toggle-positive"
+                                ng-change="notifChange()">Push Notifications</ion-toggle>
+                        <!--
+                        <div class="item item-toggle ob-form-toggle-container" ng-change="notifChange()">
+                            Push Notifications
+                            <label class="toggle toggle-positive ob-form-toggle">
+                                <input type="checkbox" ng-model="notif.checked"/>
+                                <div class="track">
+                                    <div class="handle"></div>
+                                </div>
+                            </label>
+                        </div>
+                        -->
+                </div>
+                <div class="ob-form-row" ng-show="user.group == 'Trainers'">
+                    <ion-toggle ng-model="user.mobile"
+                                class="ob-form-toggle2"
+                                toggle-class="toggle-positive"
+                                ng-change="notifChange()">Mobile Trainer</ion-toggle>
+                </div>
+                <div class="ob-form-row" ng-show="user.mobile">
+                    <span class="ob-form-text">Travel Radius (km)</span>
+                    <input type="number" class="ob-form-text-input" ng-model="user.radius" placeholder="0" />
+                </div>
+                <div class="ob-form-row ob-form-flex-row" ng-click="goTo('#/menu/tos')">
+                    <span class="ob-form-text">Terms of Service</span>
+                    <span class="ob-form-icon ob-form-icon-rightarrow"></span>
+                </div>
+            </div>
+            <div class="ob-vertical-spacing"></div>
+            <button class="ob-block-button ob-button-blue" ng-click="save()">Save</button>
+            <button class="ob-block-button ob-button-red" ng-click="logout()">Logout</button>
+        </div>
+    </ion-content>
+</ion-view>

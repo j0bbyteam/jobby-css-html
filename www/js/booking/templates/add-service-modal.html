@@ -1,0 +1,62 @@
+<ion-modal-view>
+    <ion-header-bar align-title="center" class="ob-darkpurple-bg">
+        <h1 class="title ob-navbar-title">{{newservice.name}}</h1>
+        <div class="buttons">
+            <button ng-click="closeAddServiceModal()" class="button button-icon">
+                <i class="icon ion-close ob-white-color"></i>
+            </button>
+        </div>
+    </ion-header-bar>
+    <ion-content class="has-header ob-grey-bg">
+        <div class="ob-content">
+            <div class="ob-form ob-form-light">
+                <div class="ob-form-row ob-form-flex-row">
+                    <span class="ob-form-prompt">Service Name</span>
+                    <input class="ob-form-text" type="text" style="color: white"
+                           ng-model="newservice.name" placeholder=""/>
+                </div>
+                <div class="ob-form-row ob-form-flex-row">
+                    <span class="ob-form-prompt">Service Description</span>
+                    <textarea rows="8" class="ob-form-text" style="width: 100%">{{newservice.description}}</textarea>
+                </div>
+                <div class="ob-form-row ob-form-flex-row">
+                    <span class="ob-form-prompt">Minimum Duration</span>
+                    <input ng-model="newservice.duration" type="range" name="volume" min="30" max="300" value="30" step="30"> {{newservice.duration}}Minutes
+                </div>
+                <div class="ob-form-row ob-form-flex-row">
+                    <span class="ob-form-prompt">Regular Rate</span>
+                    <input class="ob-form-text" type="number" style="color: white"
+                           ng-model="newservice.regular" placeholder=""/>
+
+                    <!--<select class="ob-form-select"-->
+                            <!--ng-model="newservice.regularunit">-->
+                        <!--<option>Each Time</option>-->
+                        <!--<option>Per Half An Hour</option>-->
+                    <!--</select>-->
+                </div>
+
+                <div class="ob-form-row ob-form-flex-row">
+                    <span class="ob-form-prompt">Prime Time Rate</span>
+                    <input class="ob-form-text" type="number" style="color: white"
+                           ng-model="newservice.prime" placeholder=""/>
+
+                    <!--<select class="ob-form-select"-->
+                            <!--ng-model="newservice.primeunit">-->
+                        <!--<option>Each Time</option>-->
+                        <!--<option>Per Half An Hour</option>-->
+                    <!--</select>-->
+                </div>
+
+                <div class="ob-form-row ob-form-flex-row">
+                    <ion-checkbox ng-model="newservice.directBooking">Direct Booking</ion-checkbox>
+                </div>
+
+                <div class="ob-form-row ob-form-flex-row">
+                    <button class="button button-dark" disabled>Upload Images (Coming soon)</button>
+                </div>
+            </div>
+            <div class="buttongroup3">
+                <button class="buttongroup3-button" ng-click="saveService()">Save</button>
+            </div>        </div>
+    </ion-content>
+</ion-modal-view>

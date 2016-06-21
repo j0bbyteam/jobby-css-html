@@ -1,0 +1,63 @@
+<ion-view>
+    <ion-content class="has-header popup-content">
+        <div class="popup-content-div">
+            <div class="ob-instructions">Change Payment Information</div>
+            <form class="ob-form" stripe-form="handleStripe" name="myForm">
+                <div class="ob-form-row ob-form-flex-row">
+                    <input class="ob-form-text-input" type="text" placeholder="Cardholder name"/>
+                </div>
+                <div class="ob-form-row ob-form-flex-row">
+                    <input class="ob-form-text-input" type="number" placeholder="Card Number"
+                           ng-model="number" payments-validate="card" payments-format="card" payments-type-model="type" ng-class="myForm.number.$card.type"/>
+                </div>
+                <div class="ob-form-row ob-form-flex-row">
+                    <!-- ng-model="expiry" payments-validate="expiry" payments-format="expiry" -->
+                    <span class="ob-form-prompt">Expires</span>
+                    <div class="ob-form-select-container">
+                        <select class="ob-form-select">
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div>
+                    <div class="ob-form-select-container">
+                        <select class="ob-form-select">
+                            <option value="2015">2015</option>
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="ob-form-row ob-form-flex-row">
+                    <input class="ob-form-text-input" type="number" placeholder="Security Code/CVC"
+                           ng-model="cvc" payments-validate="cvc" payments-format="cvc" payments-type-model="type"/>
+                </div>
+                <div class="ob-form-row ob-form-flex-row">
+                    <input class="ob-form-text-input" type="text" placeholder="Postal Code"/>
+                </div>
+                <div class="ob-form-row ob-form-flex-row">
+                    <input class="ob-form-text-input" type="text" placeholder="City / Town"/>
+                </div>
+                <div class="ob-form-row ob-form-flex-row">
+                    <input class="ob-form-text-input" type="text" placeholder="Province / State"/>
+                </div>
+                <div class="ob-form-row ob-form-flex-row">
+                    <input class="ob-form-text-input" type="text" placeholder="Country"/>
+                </div>
+            </form>
+            <button type="submit" class="ob-block-button ob-button-blue">Done</button>
+        <div>
+    </ion-content>
+</ion-view>

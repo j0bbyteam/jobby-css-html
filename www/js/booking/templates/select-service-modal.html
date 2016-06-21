@@ -1,0 +1,22 @@
+<ion-modal-view>
+    <ion-header-bar align-title="center" class="ob-darkpurple-bg">
+        <h1 class="title ob-navbar-title">{{newservice.name}}</h1>
+        <div class="buttons">
+            <button ng-click="closeAddServiceModal()" class="button button-icon">
+                <i class="icon ion-close ob-white-color"></i>
+            </button>
+        </div>
+    </ion-header-bar>
+    <ion-content class="has-header ob-grey-bg">
+        <h1>Please Select A Service</h1>
+
+        <div >
+            <div class="row" ng-repeat="service in services">
+                <div class="item ob-form-text ob-text-center ob-blue-color" style="padding: 0px" ng-click="selectService(service)">
+                    <span>{{service.name}}</span>
+                    <span>${{service.regular}} - ${{service.prime}}</span>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

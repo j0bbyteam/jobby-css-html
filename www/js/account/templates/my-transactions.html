@@ -1,0 +1,51 @@
+<ion-view view-title="My Bookings" cache-view="false">
+    <ion-nav-buttons side="right">
+        <a ng-click="openDatePicker()" class="button button-icon icon ion-calendar"></a>
+    </ion-nav-buttons>
+    <ion-content class="ob-page">
+        <!--<div class="ob-block-switch2" ng-show="$root.user.group == 'Trainers'">-->
+            <!--<button class="ob-block-switch2-button"-->
+                    <!--ng-click="rootGoTo('#/menu/my-trainings')">As Prof.</button>-->
+            <!--<button class="ob-block-switch2-button ob-block-switch2-button-selected">As User</button>-->
+        <!--</div>-->
+        <!--<div class="ob-block-switch2">-->
+            <!--<button class="ob-block-switch2-button"-->
+                    <!--ng-class="{'ob-block-switch2-button-selected' : showingAll == false}"-->
+                    <!--ng-click="showCurrent()">Show by Date</button>-->
+            <!--<button class="ob-block-switch2-button"-->
+                    <!--ng-class="{'ob-block-switch2-button-selected' : showingAll}"-->
+                    <!--ng-click="showAll()">Show All</button>-->
+        <!--</div>-->
+        <div class="ob-form ob-form-light" ng-show="showingAll == false">
+            <div class="ob-form-row">
+                <time-picker class="ob-form-timepicker"
+                             allow-time-before-now="true"
+                             show-time-picker="false"
+                             data-inc-icon-class="ion ion-chevron-up"
+                             data-dec-icon-class="ion ion-chevron-down" />
+            </div>
+        </div>
+        </time-picker>
+        <div class="ob-list">
+            <div ng-show="myTransactions.length <= 0" class="ob-list-emptytext ob-images-emptytext-light">No sessions to display</div>
+            <div class="ob-list-row" ng-repeat="item in myTransactions" item="event" ng-click="showQRcode(item)">
+                <div class="ob-list-col-img">
+                    <img class="ob-list-img"
+                         src="https://s3.amazonaws.com/com.onebody.profile/{{item.type}}/{{item.classID}}{{item.eventID}}{{item.userID | htmlEncode}}/profilepic.jpg"
+                         onerror="this.src='img/emptypic-user.png'"/>
+                </div>
+                <div class="ob-list-col-flex">
+                    <div class="ob-list-text" ng-show="item.type == 'Users'">Trainer: {{item.trainerName}}</div>
+                    <div class="ob-list-text" ng-show="item.type == 'Classes'">Class: {{item.className}}</div>
+                    <div class="ob-list-text" ng-show="item.type == 'Events'">Event: {{item.className}}</div>
+                    <div class="ob-list-subtext">Start Time: {{item.starttime | date:'yyyy-MM-dd HH:mm:ss'}}</div>
+                    <!--<div class="ob-list-subtext">Created: {{item.created | date:'yyyy-MM-dd HH:mm:ss'}}</div>-->
+                    <div class="ob-list-subtext">Duration: {{item.duration}} mins</div>
+                    <!--<div class="ob-list-subtext">{{item.message}}</div>-->
+                    <!--<div class="ob-list-subtext">{{item.address}}</div>-->
+                    <!--<div class="ob-list-subtext">{{item.commentlocation}}</div>-->
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

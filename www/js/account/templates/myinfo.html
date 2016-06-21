@@ -1,0 +1,87 @@
+<ion-view view-title="Edit Profile">
+    <ion-content class="ob-page">
+        <div class="ob-content">
+            <div class="ob-form ob-form-light">
+                <div class="ob-form-row ob-form-flex-row">
+                    <span class="ob-form-prompt">Username</span>
+                    <input class="ob-form-text-input" type="text" ng-model="user.username" placeholder="{{user.username}}"/>
+                </div>
+
+                <div class="ob-form-row ob-form-flex-row">
+                    <span class="ob-form-prompt">Profile Picture</span>
+                    <img id="profileuserimg"
+                         class="ob-form-icon ob-roundedcorners4 ob-whiteborder"
+                         src="{{s3imgLink}}"
+                         onerror="this.src='img/emptypic-user.png'"
+                         ng-click="setdp()">
+                </div>
+                <div class="ob-form-row ob-form-flex-row">
+                    <span class="ob-form-prompt">Image Link</span>
+                    <input class="ob-form-text-input" type="text" ng-model="user.imgLink" placeholder="Image Link" ng-change="imageChanged(user.imgLink)"/>
+                </div>
+                <div class="ob-form-row ob-form-flex-row">
+                    <span class="ob-form-prompt">YouTube Link</span>
+                    <input class="ob-form-text-input" type="text" ng-model="user.youtubeLink" placeholder="YouTube Link"/>
+                </div>
+                <div class="ob-form-row ob-form-flex-row">
+                    <span class="ob-form-prompt">Profession</span>
+                    <input class="ob-form-text-input" type="text" ng-model="user.profession" placeholder="Profession"/>
+                </div>
+                <div class="ob-form-row ob-form-flex-row">
+                    <span class="ob-form-prompt">First Name</span>
+                    <input class="ob-form-text-input" type="text" ng-model="user.firstname" placeholder="First Name"/>
+                </div>
+                <div class="ob-form-row ob-form-flex-row">
+                    <span class="ob-form-prompt">Last Name</span>
+                    <input class="ob-form-text-input" type="text" ng-model="user.lastname" placeholder="Last Name"/>
+                </div>
+                <div class="ob-form-row ob-form-flex-row">
+                    <span class="ob-form-prompt">Bio</span>
+                    <textarea class="ob-form-textarea ob-form-textarea-small" ng-model="user.info"
+                              placeholder="Tell us about yourself and your passion for fitness">{{user.info}}</textarea>
+                </div>
+
+                <div class="ob-form-row ob-form-flex-row">
+                    <span class="ob-form-prompt">Normal Rate</span>
+                    <input class="ob-form-text-input" type="number" ng-model="user.normalRate" placeholder="30"/>
+                </div>
+
+                <div class="ob-form-row ob-form-flex-row">
+                    <span class="ob-form-prompt">Prime Rate</span>
+                    <input class="ob-form-text-input" type="number" ng-model="user.primeRate" placeholder="50"/>
+                </div>
+
+                <div class="ob-form-row" ng-show="isIOS()">
+                    <ion-toggle ng-model="notif.checked"
+                                class="ob-form-toggle2"
+                                toggle-class="toggle-positive"
+                                ng-change="notifChange()">Push Notifications</ion-toggle>
+                </div>
+
+                <div class="ob-form-row">
+                    <span class="ob-form-text">Travel Radius (km)</span>
+                    <input type="number" class="ob-form-text-input" ng-model="user.radius" placeholder="0" />
+                </div>
+                <div class="ob-form-row ob-form-flex-row" ng-click="goTo('#/menu/tos')">
+                    <span class="ob-form-text">Terms of Service</span>
+                    <span class="ob-form-icon ob-form-icon-rightarrow"></span>
+                </div>
+            </div>
+            <!--
+            <div class="ob-block-button ob-button-dark" ng-click="addCertificate()">
+                <i class="icon ion-email"></i>
+                Add Certificate
+            </div>
+            -->
+            <!--
+            <ion-list style="display: none">
+                <ion-item ng-repeat="cert in user.certs">
+                    <img src="{{cert}}" style="width: 80%; margin-right: 10%; margin-left: 10%" />
+                </ion-item>
+            </ion-list>
+            -->
+            <div class="ob-block-button ob-button-blue" ng-click="save()">Save</div>
+            <button class="ob-block-button ob-button-red" ng-click="logout()">Logout</button>
+        </div>
+    </ion-content>
+</ion-view>

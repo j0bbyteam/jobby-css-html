@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://localhost:8880/#/menu/map -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: *; script-src * 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src *; frame-src *;">-->
+
+    <title></title>
+
+    <link href="http://localhost:8880/lib/guillotine/css/jquery.guillotine.css" media="all" rel="stylesheet">
+
+    <link href="http://localhost:8880/lib/ionic/css/ionic.css" rel="stylesheet">
+    <!--<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="http://localhost:8880/css/style.css" rel="stylesheet">
+
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc-XmMI2v5pi07sq6t7bk7NUtnEmO9dEg&sensor=true"></script>-->
+    <!--<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>-->
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es&sensor=true"></script>-->
+    <script src="./localhost_files/js"></script><style type="text/css"></style><script src="./localhost_files/main.js"></script>
+    <link href="http://localhost:8880/lib/leaflet/leaflet.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="./localhost_files/ionic.bundle.js"></script>
+    <script src="./localhost_files/underscore-min.js"></script>
+    <script type="text/javascript" src="./localhost_files/angular-resource.min.js"></script>
+    <script src="./localhost_files/jquery.min.js"></script>
+    <script src="./localhost_files/jquery-ui.min.js"></script>
+    <script src="./localhost_files/ui-bootstrap-tpls-0.11.0.min.js"></script>
+    <script src="./localhost_files/moment.min.js"></script>
+    <script src="./localhost_files/datetimepicker.js"></script>
+    <script src="./localhost_files/stripe.js"></script>
+    <script src="./localhost_files/angular-payments.min.js"></script>
+    <script src="./localhost_files/firebase.js"></script>
+    <script src="./localhost_files/angularfire.min.js"></script>
+    <script src="./localhost_files/rsvp.min.js"></script>
+    <script src="./localhost_files/geofire.min.js"></script>
+    <script src="./localhost_files/qrcode.js"></script>
+    <script src="./localhost_files/html5-qrcode.js"></script>
+    <script src="./localhost_files/fullcalendar.min.js"></script>
+    <script src="./localhost_files/gcal.js"></script>
+    <script src="./localhost_files/calendar.js"></script>
+    <script src="./localhost_files/jquery.guillotine.min.js"></script>
+    <script src="./localhost_files/jstz-1.0.4.min.js"></script>
+    <script src="./localhost_files/react.min.js"></script>
+    <script src="./localhost_files/ngReact.min.js"></script>
+
+    <script src="./localhost_files/leaflet.js"></script>
+    <script src="./localhost_files/angular-leftlet-directive.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="./localhost_files/cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="./localhost_files/cdv-plugin-paypal-mobile-sdk.js"></script>
+    <script src="./localhost_files/paypal-mobile-js-helper.js"></script>
+    <script src="./localhost_files/app.js"></script>
+    <script src="./localhost_files/account.js"></script>
+    <script src="./localhost_files/map.js"></script>
+    <script src="./localhost_files/services.js"></script>
+    <script src="./localhost_files/trainer.js"></script>
+    <script src="./localhost_files/event.js"></script>
+    <script src="./localhost_files/timepicker.js"></script>
+    <script src="./localhost_files/class.js"></script>
+    <script src="./localhost_files/gym.js"></script>
+    <script src="./localhost_files/user.js"></script>
+    <script src="./localhost_files/list.js"></script>
+
+    <!--<script type="text/javascript">-->
+        <!--window.onload = function(){-->
+            <!--console.log(angular.element(document.getElementById('body')).scope());-->
+        <!--};-->
+        <!--function callFromJava(url){-->
+
+            <!--alert("ANDROID calling " + url);-->
+
+            <!--angular.element(document.getElementById('body')).scope().goTo(url);-->
+        <!--}-->
+
+        <!--var foo = function(a,b,c){-->
+            <!--console.log(arguments);-->
+            <!--console.log(this);-->
+            <!--return a+b+c;-->
+        <!--}-->
+        <!--var bar = function(i){-->
+            <!--console.log(i);-->
+        <!--}-->
+        <!--function pipe(foo, bar){-->
+            <!--return function(){-->
+                <!--console.log(arguments);-->
+                <!--bar(foo.apply(this, arguments));-->
+            <!--}-->
+        <!--}-->
+        <!--pipe(foo, bar)(1,2,3);-->
+    <!--</script>-->
+
+<script type="text/javascript" charset="UTF-8" src="./localhost_files/common.js"></script><script type="text/javascript" charset="UTF-8" src="./localhost_files/util.js"></script><script type="text/javascript" charset="UTF-8" src="./localhost_files/stats.js"></script><script type="text/javascript" charset="UTF-8" src="./localhost_files/AuthenticationService.Authenticate"></script></head>
+<body id="body" ng-app="starter" animation="none" class="grade-a platform-browser platform-macintel platform-ready" cz-shortcut-listen="true">
+<ion-nav-view class="view-container" nav-view-transition="none" nav-view-direction="enter" nav-swipe=""><ion-view class="pane" nav-view="cached" style="-webkit-transform: translate3d(0%, 0px, 0px);">
+    <ion-nav-bar class="bar-dark ob-darkpurple-bg nav-bar-container hide" nav-bar-transition="none" nav-bar-direction="forward" nav-swipe="">
+        <ion-nav-back-button class="hide"></ion-nav-back-button>
+    <div class="nav-bar-block" nav-bar="active"><ion-header-bar class="bar-dark ob-darkpurple-bg bar bar-header disable-user-behavior" align-title="center"><button class="button back-button buttons ob-back-button button-clear header-item" ng-click="$ionicGoBack()" style="-webkit-transition-duration: 0ms; transition-duration: 0ms;"><i class="icon ion-ios-arrow-back"></i> <span class="back-text" style="-webkit-transition-duration: 0ms; transition-duration: 0ms; -webkit-transform: translate3d(0px, 0px, 0px);"></span></button><div class="title title-center header-item" style="-webkit-transition-duration: 0ms; transition-duration: 0ms; -webkit-transform: translate3d(0px, 0px, 0px); left: 38px; right: 38px;"><span class="nav-bar-title"><span class="ob-nav-bar-logo"></span></span></div></ion-header-bar></div><div class="nav-bar-block" nav-bar="cached"><ion-header-bar class="bar-dark ob-darkpurple-bg bar bar-header disable-user-behavior" align-title="center"><button class="button back-button hide buttons ob-back-button button-clear header-item" ng-click="$ionicGoBack()" style="-webkit-transition-duration: 0ms; transition-duration: 0ms; opacity: 0;"><i class="icon ion-ios-arrow-back"></i> <span class="back-text" style="-webkit-transition-duration: 0ms; transition-duration: 0ms; -webkit-transform: translate3d(0px, 0px, 0px); opacity: 0;"></span></button><div class="title title-center header-item" style="-webkit-transition-duration: 0ms; transition-duration: 0ms; -webkit-transform: translate3d(32px, 0px, 0px); opacity: 0;"></div></ion-header-bar></div></ion-nav-bar>
+    <ion-nav-view name="prelogin" class="view-container" nav-view-transition="none" nav-view-direction="forward" nav-swipe=""><ion-view hide-nav-bar="true" class="pane" nav-view="cached" style="-webkit-transform: translate3d(0%, 0px, 0px);">
+    <ion-content class="menu1-content scroll-content ionic-scroll  has-header" scrollbar-x="false" scrollbar-y="false"><div class="scroll" style="-webkit-transform: translate3d(0px, 0px, 0px) scale(1);">
+        <div class="home-content-div ob-sections-vertical">
+            <div class="ob-section"></div>
+            <div>
+                <div class="ob-main-instructions">
+                    Howdy!<br>
+                    Let's get to know each other!
+                </div>
+                <div class="ob-sub-instructions">Choose a social network or create an account</div>
+                <div class="signup-button facebook-button" ng-click="facebookLogin()">
+                    <span class="signup-button-left">
+                        <span class="signup-button-icon facebook-icon"></span>
+                    </span>
+                    <span class="signup-button-text">
+                        Sign in with <span class="text-avnltp-demi">Facebook</span>
+                    </span>
+                    <span class="signup-button-right"></span>
+                </div>
+                <div class="signup-button google-plus-button" ng-click="googleLogin()">
+                    <span class="signup-button-left">
+                        <span class="signup-button-icon google-plus-icon"></span>
+                    </span>
+                    <span class="signup-button-text">
+                        Sign in with <span class="text-avnltp-demi">Google+</span>
+                    </span>
+                    <span class="signup-button-right"></span>
+                </div>
+                <a class="signup-button onebody-button" href="http://localhost:8880/#/prelogin/register">
+                    <span class="signup-button-left">
+                        <span class="signup-button-icon onebody-icon"></span>
+                    </span>
+                    <span class="signup-button-text">
+                        Create <span class="text-avnltp-demi">1Body</span> account
+                    </span>
+                    <span class="signup-button-right"></span>
+                </a>
+                <a class="ob-block-text-button" href="http://localhost:8880/#/prelogin/login">Already have an account?</a>
+            </div>
+            <div class="ob-section"></div>
+            <div class="home-bottom-space2"></div>
+            <div class="home-footer">
+                <a class="ob-block-text-button" href="http://localhost:8880/#/prelogin/tos">
+                    By signing up, I agree to <span class="text-underline text-avnltp-demi">1Body's</span>
+                    <span class="text-avnltp-demi">Terms of Service</span>,
+                    <span class="text-avnltp-demi">Privacy Policy</span>,
+                    <span class="text-avnltp-demi">Guest Refund Policy</span>, and
+                    <span class="text-avnltp-demi">Host Guarantee Terms</span>.
+                </a>
+            </div>
+        </div>
+    </div></ion-content>
+</ion-view><ion-view class="pane" nav-view="active" style="-webkit-transform: translate3d(0%, 0px, 0px);">
+    <ion-nav-title class="hide"></ion-nav-title>
+    <ion-content class="menu1-content scroll-content ionic-scroll  has-header"><div class="scroll" style="-webkit-transform: translate3d(0px, 0px, 0px) scale(1);">
+        <div class="menu1-content-div ob-sections-vertical">
+            <div class="ob-section-zerobase ob-center-parent">
+                <div class="ob-center-vert-child">
+                    <div class="ob-instructions">Let's get started!</div>
+                </div>
+            </div>
+            <div>
+                <div class="ob-form">
+                    <div class="ob-form-row ob-form-flex-row">
+                        <input class="ob-form-text-input ng-pristine ng-untouched ng-valid ng-valid-email" ng-model="user.email" type="email" placeholder="Email Address">
+                    </div>
+                    <div class="ob-form-row ob-form-flex-row">
+                        <input class="ob-form-text-input ng-pristine ng-untouched ng-valid" ng-model="user.password" type="password" placeholder="Password">
+                    </div>
+                </div>
+                <button class="ob-block-button ob-button-blue" ng-click="signin()">Login</button>
+                <a class="ob-block-text-button" href="http://localhost:8880/#/prelogin/forgot-password">Forgot password?</a>
+            </div>
+            <div class="ob-section-zerobase"></div>
+        </div>
+    </div><div class="scroll-bar scroll-bar-v"><div class="scroll-bar-indicator scroll-bar-fade-out" style="-webkit-transform: translate3d(0px, 0px, 0px) scaleY(1); height: 608px;"></div></div></ion-content>
+</ion-view></ion-nav-view>
+</ion-view><ion-side-menus enable-menu-with-back-views="false" class="pane view" nav-view="active" style="-webkit-transform: translate3d(0%, 0px, 0px);">
+    <ion-pane ion-side-menu-content="" drag-content="false" class="menu-content pane">
+        <ion-nav-bar class="bar-dark ob-darkpurple-bg nav-bar-container hide" nav-bar-transition="none" nav-bar-direction="none" nav-swipe="">
+            <ion-nav-back-button class="hide"></ion-nav-back-button>
+            <ion-nav-buttons side="left" class="hide"></ion-nav-buttons>
+        <div class="nav-bar-block" nav-bar="cached"><ion-header-bar class="bar-dark ob-darkpurple-bg bar bar-header disable-user-behavior" align-title="center"><button class="button back-button hide buttons ob-back-button button-clear header-item" ng-click="$ionicGoBack()"><i class="icon ion-ios-arrow-back"></i> <span class="back-text"></span></button><div class="buttons buttons-left header-item"><span class="left-buttons">
+                <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+            </span></div><div class="title title-center header-item"></div></ion-header-bar></div><div class="nav-bar-block" nav-bar="active"><ion-header-bar class="bar-dark ob-darkpurple-bg bar bar-header disable-user-behavior" align-title="center"><button class="button back-button hide buttons ob-back-button button-clear header-item" ng-click="$ionicGoBack()"><i class="icon ion-ios-arrow-back"></i> <span class="back-text"></span></button><div class="buttons buttons-left header-item"><span class="left-buttons">
+                <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+            </span></div><div class="title title-center header-item"></div></ion-header-bar></div></ion-nav-bar>
+        <ion-nav-view name="menu" class="view-container" nav-view-transition="none" nav-view-direction="none" nav-swipe="">
+        <ion-view hide-nav-bar="true" class="pane" nav-view="active" style="-webkit-transform: translate3d(0%, 0px, 0px);">
+    <!--<ion-content class="ob-grey-bg" scroll="false" data-tap-disabled="true">-->
+        <!--<ion-content class="map-content">-->
+            <div class="map-gradient"></div>
+            <div class="ob-header ob-map-header">
+                <div class="ob-header-status-bar"></div>
+                <div class="ob-header-nav-bar">
+                    <div class="ob-header-icon">
+                        <button ng-click="toggleMenu()" class="button button-icon button-dark">
+                            <i class="icon ion-navicon"></i>
+                        </button>
+                    </div>
+                    <div class="ob-header-flex-area">
+                        <div class="ob-bar-search-input-container">
+                            <i class="icon ion-search ob-bar-search-input-icon-left"></i>
+                            <input type="search" class="ob-bar-search-input ng-pristine ng-untouched ng-valid" ng-model="searchContainer.searchTerms" ng-focus="onSearch()" placeholder="ex. hot yoga, boxing">
+                            <i class="icon ion-ios-close-outline ob-bar-search-input-icon-right" ng-click="clearSearch()"></i>
+                        </div>
+                    </div>
+                    <div class="ob-header-icon">
+                        <a class="ob-header-list-view-icon-container" href="http://localhost:8880/#/menu/list" nav-transition="none">
+                            <span class="ob-header-list-view-icon"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="ob-map-header-bottom-white-line"></div>
+            </div>
+            <div class="ob-tabs">
+                <a class="ob-tab-item" ng-class="{&#39;ob-tab-selected&#39;:header === &#39;Users&#39;}" ng-click="clickontab(&#39;Users&#39;, $event)">
+                    &nbsp;Professionals&nbsp;
+                </a>
+                <a class="ob-tab-item" ng-class="{&#39;ob-tab-selected&#39;:header === &#39;Classes&#39;}" ng-click="clickontab(&#39;Classes&#39;, $event)">
+                    Classes
+                </a>
+                <a class="ob-tab-item ob-tab-selected" ng-class="{&#39;ob-tab-selected&#39;:header === &#39;Events&#39;}" ng-click="clickontab(&#39;Events&#39;, $event)">
+                    Events
+                </a>
+            </div>
+
+            <button ng-click="mobile_popover.show($event)" class="button button-icon ob-map-button map-search-button">
+                <i class="icon ion-search"></i>
+            </button>
+
+            <button ng-click="centerOnMe()" class="button button-icon ob-map-button map-center-button">
+                <i class="icon ion-ios-navigate-outline"></i>
+            </button>
+
+            <div id="info"></div>
+            <!--<div id="dashmap" data-tap-disabled="true"></div>-->
+            <div class="angular-leaflet-map leaflet-container leaflet-fade-anim" id="dashmap" markers="markers" data-tap-disabled="true" center="center" defaults="defaults" ng-init="doMapInit()" tabindex="0" style="position: relative;"><div ng-transclude=""></div><div class="leaflet-map-pane" style="transform: translate3d(-333px, 711px, 0px);"><div class="leaflet-tile-pane"><div class="leaflet-layer"><div class="leaflet-tile-container leaflet-zoom-animated"></div><div class="leaflet-tile-container leaflet-zoom-animated"><img class="leaflet-tile leaflet-tile-loaded" src="./localhost_files/746.png" style="height: 256px; width: 256px; left: 210px; top: -384px;"><img class="leaflet-tile leaflet-tile-loaded" src="./localhost_files/747.png" style="height: 256px; width: 256px; left: 210px; top: -128px;"><img class="leaflet-tile leaflet-tile-loaded" src="./localhost_files/747(1).png" style="height: 256px; width: 256px; left: -46px; top: -128px;"><img class="leaflet-tile leaflet-tile-loaded" src="./localhost_files/746(1).png" style="height: 256px; width: 256px; left: -46px; top: -384px;"><img class="leaflet-tile leaflet-tile-loaded" src="./localhost_files/746(2).png" style="height: 256px; width: 256px; left: 466px; top: -384px;"><img class="leaflet-tile leaflet-tile-loaded" src="./localhost_files/747(2).png" style="height: 256px; width: 256px; left: 466px; top: -128px;"><img class="leaflet-tile leaflet-tile-loaded" src="./localhost_files/745.png" style="height: 256px; width: 256px; left: 210px; top: -640px;"><img class="leaflet-tile leaflet-tile-loaded" src="./localhost_files/748.png" style="height: 256px; width: 256px; left: 210px; top: 128px;"><img class="leaflet-tile leaflet-tile-loaded" src="./localhost_files/745(1).png" style="height: 256px; width: 256px; left: 466px; top: -640px;"><img class="leaflet-tile leaflet-tile-loaded" src="./localhost_files/748(1).png" style="height: 256px; width: 256px; left: -46px; top: 128px;"><img class="leaflet-tile leaflet-tile-loaded" src="./localhost_files/745(2).png" style="height: 256px; width: 256px; left: -46px; top: -640px;"><img class="leaflet-tile leaflet-tile-loaded" src="./localhost_files/748(2).png" style="height: 256px; width: 256px; left: 466px; top: 128px;"><img class="leaflet-tile leaflet-tile-loaded" src="./localhost_files/744.png" style="height: 256px; width: 256px; left: 210px; top: -896px;"><img class="leaflet-tile leaflet-tile-loaded" src="./localhost_files/744(1).png" style="height: 256px; width: 256px; left: 466px; top: -896px;"><img class="leaflet-tile leaflet-tile-loaded" src="./localhost_files/745(3).png" style="height: 256px; width: 256px; left: 722px; top: -640px;"><img class="leaflet-tile leaflet-tile-loaded" src="./localhost_files/746(3).png" style="height: 256px; width: 256px; left: 722px; top: -384px;"><img class="leaflet-tile leaflet-tile-loaded" src="./localhost_files/744(2).png" style="height: 256px; width: 256px; left: 722px; top: -896px;"><img class="leaflet-tile leaflet-tile-loaded" src="./localhost_files/747(3).png" style="height: 256px; width: 256px; left: 722px; top: -128px;"><img class="leaflet-tile leaflet-tile-loaded" src="./localhost_files/744(3).png" style="height: 256px; width: 256px; left: -46px; top: -896px;"></div></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"></div><div class="leaflet-overlay-pane"></div><div class="leaflet-marker-pane"><div class="leaflet-marker-icon div-icon-events leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(430px, -244px, 0px); z-index: -244;"><img src="./localhost_files/profilepic.jpg" style="border-radius: 50%; width: 40px; height: 40px; border: 3px solid white;"></div><div class="leaflet-marker-icon div-icon-events leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(410px, -308px, 0px); z-index: -308;"><img src="./localhost_files/profilepic(1).jpg" style="border-radius: 50%; width: 40px; height: 40px; border: 3px solid white;"></div><div class="leaflet-marker-icon div-icon-events leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(433px, -381px, 0px); z-index: -381;"><img src="./localhost_files/profilepic(2).jpg" style="border-radius: 50%; width: 40px; height: 40px; border: 3px solid white;"></div><div class="leaflet-marker-icon div-icon-events leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(433px, -388px, 0px); z-index: -388;"><img src="./localhost_files/profilepic(3).jpg" style="border-radius: 50%; width: 40px; height: 40px; border: 3px solid white;"></div><div class="leaflet-marker-icon div-icon-events leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(427px, -426px, 0px); z-index: -426;"><img src="./localhost_files/profilepic(4).jpg" style="border-radius: 50%; width: 40px; height: 40px; border: 3px solid white;"></div><div class="leaflet-marker-icon div-icon-events leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(427px, -428px, 0px); z-index: -428;"><img src="./localhost_files/profilepic(5).jpg" style="border-radius: 50%; width: 40px; height: 40px; border: 3px solid white;"></div><div class="leaflet-marker-icon div-icon-events leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(443px, -435px, 0px); z-index: -435;"><img src="./localhost_files/profilepic(6).jpg" style="border-radius: 50%; width: 40px; height: 40px; border: 3px solid white;"></div><div class="leaflet-marker-icon div-icon-events leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(528px, -330px, 0px); z-index: -330;"><img src="./localhost_files/profilepic(7).jpg" style="border-radius: 50%; width: 40px; height: 40px; border: 3px solid white;"></div><div class="leaflet-marker-icon div-icon-events leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(560px, -315px, 0px); z-index: -315;"><img src="./localhost_files/profilepic(8).jpg" style="border-radius: 50%; width: 40px; height: 40px; border: 3px solid white;"></div><div class="leaflet-marker-icon div-icon-events leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(479px, -434px, 0px); z-index: -434;"><img src="./localhost_files/profilepic(9).jpg" style="border-radius: 50%; width: 40px; height: 40px; border: 3px solid white;"></div><div class="leaflet-marker-icon div-icon-events leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(516px, -186px, 0px); z-index: -186;"><img src="./localhost_files/profilepic(10).jpg" style="border-radius: 50%; width: 40px; height: 40px; border: 3px solid white;"></div><div class="leaflet-marker-icon div-icon-events leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(299px, -124px, 0px); z-index: -124;"><img src="./localhost_files/profilepic(11).jpg" style="border-radius: 50%; width: 40px; height: 40px; border: 3px solid white;"></div><div class="leaflet-marker-icon div-icon-events leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(170px, -194px, 0px); z-index: -194;"><img src="./localhost_files/profilepic(12).jpg" style="border-radius: 50%; width: 40px; height: 40px; border: 3px solid white;"></div></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"></div></div></div>
+        <!--</ion-content>-->
+    <!--</ion-content>-->
+</ion-view></ion-nav-view>
+        <div id="notificationAndFeeds" class="ob-flnotif" style="top: 120px; height: 50px">
+            <div on-drag="onDrag($event)" on-release="onRelease($event)" class="ob-flnotif-header disable-user-behavior"> <!-- {'ob-flnotif-header-button-hasnotif' : hasNewNotifications} -->
+                <span class="ob-flnotif-header-button ob-flnotif-header-button-hasnotif" ng-class="{&#39;ob-flnotif-header-button-hasnotif&#39; : hasNewNotifications == true}" ng-click="toggleFloatingMenu()">
+                </span>
+
+            </div> <!-- ng-class="{'ob-flnotif-header-button' : true, 'ob-flnotif-header-button-hasnotif' : hasNewNotifications == true}" -->
+            <div class="ob-flnotif-main">
+                <!-- ngRepeat: item in feeds | orderBy:'-created' --><a class="profile-feed-review-list-row" ng-repeat="item in feeds | orderBy:&#39;-created&#39;" ng-click="replyto()">
+                    <span class="profile-feed-review-list-row-left">
+                        <img class="profile-feed-review-list-img" src="./localhost_files/profilepic(13).jpg">
+                    </span>
+                    <span class="profile-feed-review-list-row-right">
+                        <div class="profile-feed-review-text ng-binding">You booked a training session with qqqqq at 2015-7-15T02:00:00</div>
+                        <div class="profile-feed-review-creation ng-binding">2015-07-15 00:12:41</div>
+                    </span>
+
+                </a><!-- end ngRepeat: item in feeds | orderBy:'-created' --><a class="profile-feed-review-list-row" ng-repeat="item in feeds | orderBy:&#39;-created&#39;" ng-click="replyto()">
+                    <span class="profile-feed-review-list-row-left">
+                        <img class="profile-feed-review-list-img" src="./localhost_files/profilepic(13).jpg">
+                    </span>
+                    <span class="profile-feed-review-list-row-right">
+                        <div class="profile-feed-review-text ng-binding">You booked a training session with qqqqq at 2015-7-15T01:30:00</div>
+                        <div class="profile-feed-review-creation ng-binding">2015-07-15 00:09:22</div>
+                    </span>
+
+                </a><!-- end ngRepeat: item in feeds | orderBy:'-created' --><a class="profile-feed-review-list-row" ng-repeat="item in feeds | orderBy:&#39;-created&#39;" ng-click="replyto()">
+                    <span class="profile-feed-review-list-row-left">
+                        <img class="profile-feed-review-list-img" src="./localhost_files/profilepic(14).jpg">
+                    </span>
+                    <span class="profile-feed-review-list-row-right">
+                        <div class="profile-feed-review-text ng-binding">Transaction with simplelogin:74 cannot be processed: Not enough tokens</div>
+                        <div class="profile-feed-review-creation ng-binding">2015-07-14 23:04:03</div>
+                    </span>
+
+                </a><!-- end ngRepeat: item in feeds | orderBy:'-created' -->
+            </div>
+            <a class="ob-flnotif-more" href="http://localhost:8880/#/menu/Users/simplelogin:80" ng-click="closeNotificationAndFeeds()">See more</a>
+        </div>
+    </ion-pane>
+    <ion-side-menu side="left" class="ob-sidemenu menu menu-left" is-enabled="true" width="275" style="width: 275px;">
+        <div menu-close="" class="ob-darkpurple-bg ob-sidemenu-header" ng-click="rootGoTo(&#39;#/menu/Users/&#39; + $root.user.$id)">
+            <div class="ob-sidemenu-header-content">
+                <div class="ob-sidemenu-header-inner-content">
+                    <span class="ob-sidemenu-usericon-container">
+                        <img class="ob-sidemenu-usericon" src="./localhost_files/profilepic(15).jpg">
+                    </span>
+                    <span class="ob-sidemenu-title ng-binding">yunan zhao</span>
+                    <a menu-close="" class="ob-sidemenu-cog-container" ng-click="rootGoTo(&#39;#/menu/settings&#39;); $event.stopPropagation()">
+                        <div class="ob-cog"></div>
+                    </a>
+                </div>
+                <div class="ob-sidemenu-header-bottom-divider"></div>
+            </div>
+        </div>
+        <ion-content class="ob-sidemenu-tabs ob-darkpurple-bg scroll-content ionic-scroll" scrollbar-x="false" scrollbar-y="false"><div class="scroll" style="-webkit-transform: translate3d(0px, 0px, 0px) scale(1);">
+            <ul>
+                <a menu-close="" ng-click="rootGoTo(&#39;#/menu/map&#39;)" class="item ob-sidemenu-tab"><i class="icon ion-search ob-ionicon-small"></i>&nbsp;&nbsp;&nbsp;Map</a>
+                <a menu-close="" ng-show="$root.user.group != &#39;Trainers&#39;" ng-click="rootGoTo(&#39;#/menu/my-transactions&#39;)" class="item ob-sidemenu-tab ng-hide">My Booked Sessions</a>
+                <a menu-close="" ng-show="$root.user.group == &#39;Trainers&#39;" ng-click="rootGoTo(&#39;#/menu/my-trainings&#39;)" class="item ob-sidemenu-tab">My Booked Sessions</a>
+                <a menu-close="" ng-click="rootGoTo(&#39;#/menu/my-events&#39;)" class="item ob-sidemenu-tab">My Events</a>
+                <a menu-close="" ng-show="$root.user.group != &#39;Trainers&#39;" ng-click="rootGoTo(&#39;#/menu/my-requests&#39;)" class="item ob-sidemenu-tab ng-hide">My Mobile Requests</a>
+                <a menu-close="" ng-show="$root.user.group == &#39;Trainers&#39;" ng-click="rootGoTo(&#39;#/menu/requested-sessions&#39;)" class="item ob-sidemenu-tab">My Mobile Sessions</a>
+                <a menu-close="" ng-click="rootGoTo(&#39;#/menu/buy-tokens&#39;)" class="item ob-sidemenu-tab">Buy Tokens</a>
+                <!--ng-click="rootGoTo('#/menu/requested-sessions')">Requests Inbox</a>
+
+             <!--<a menu-close ng-show="$root.user.group == 'Trainers'" class="item ob-sidemenu-tab ob-mediumpurple-bg"-->
+                   <!--ng-click="rootGoTo('#/menu/requested-sessions')">Requests Inbox</a>-->
+                <!--<a menu-close ng-show="$root.user.group == 'Trainers'" class="item ob-sidemenu-tab ob-mediumpurple-bg"-->
+                   <!--ng-click="rootGoTo('#/menu/my-trainings')">My Trainings</a>-->
+                <a menu-close="" ng-show="$root.user.group == &#39;Trainers&#39;" class="item ob-sidemenu-tab ob-mediumpurple-bg" ng-click="rootGoTo(&#39;#/menu/my-schedule&#39;)">My Schedule</a>
+                <a menu-close="" ng-show="$root.user.group == &#39;Trainers&#39;" class="item ob-sidemenu-tab ob-mediumpurple-bg" ng-click="rootGoTo(&#39;#/menu/set-location&#39;)">My Location</a>
+                <a menu-close="" ng-show="$root.user.group == &#39;Trainers&#39;" class="item ob-sidemenu-tab ob-mediumpurple-bg" ng-click="rootGoTo(&#39;#/menu/scan&#39;)">Scan QR Code</a>
+                <a menu-close="" class="item ob-sidemenu-tab" ng-click="rootGoTo(&#39;#/menu/settings&#39;)">Settings</a>
+                <a menu-close="" ng-show="$root.user.admin == 1" class="item ob-sidemenu-tab ob-lightpurple-bg ng-hide" ng-click="rootGoTo(&#39;#/menu/editgym/new&#39;)">Create Gym</a>
+                <a menu-close="" ng-show="$root.user.admin == 1" class="item ob-sidemenu-tab ob-lightpurple-bg ng-hide" ng-click="rootGoTo(&#39;#/menu/editclass/new&#39;)">Create Class</a>
+                <a menu-close="" ng-click="logout()" class="item ob-sidemenu-tab">Logout</a>
+            </ul>
+        </div></ion-content>
+    </ion-side-menu>
+</ion-side-menus></ion-nav-view>
+
+
+<div class="backdrop"></div><div class="loading-container"><div class="loading"><ion-spinner class="spinner spinner-ios"><svg viewBox="0 0 64 64"><g stroke-width="4" stroke-linecap="round"><line y1="17" y2="29" transform="translate(32,32) rotate(180)"><animate attributeName="stroke-opacity" dur="750ms" values="1;.85;.7;.65;.55;.45;.35;.25;.15;.1;0;1" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(210)"><animate attributeName="stroke-opacity" dur="750ms" values="0;1;.85;.7;.65;.55;.45;.35;.25;.15;.1;0" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(240)"><animate attributeName="stroke-opacity" dur="750ms" values=".1;0;1;.85;.7;.65;.55;.45;.35;.25;.15;.1" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(270)"><animate attributeName="stroke-opacity" dur="750ms" values=".15;.1;0;1;.85;.7;.65;.55;.45;.35;.25;.15" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(300)"><animate attributeName="stroke-opacity" dur="750ms" values=".25;.15;.1;0;1;.85;.7;.65;.55;.45;.35;.25" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(330)"><animate attributeName="stroke-opacity" dur="750ms" values=".35;.25;.15;.1;0;1;.85;.7;.65;.55;.45;.35" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(0)"><animate attributeName="stroke-opacity" dur="750ms" values=".45;.35;.25;.15;.1;0;1;.85;.7;.65;.55;.45" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(30)"><animate attributeName="stroke-opacity" dur="750ms" values=".55;.45;.35;.25;.15;.1;0;1;.85;.7;.65;.55" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(60)"><animate attributeName="stroke-opacity" dur="750ms" values=".65;.55;.45;.35;.25;.15;.1;0;1;.85;.7;.65" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(90)"><animate attributeName="stroke-opacity" dur="750ms" values=".7;.65;.55;.45;.35;.25;.15;.1;0;1;.85;.7" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(120)"><animate attributeName="stroke-opacity" dur="750ms" values=".85;.7;.65;.55;.45;.35;.25;.15;.1;0;1;.85" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(150)"><animate attributeName="stroke-opacity" dur="750ms" values="1;.85;.7;.65;.55;.45;.35;.25;.15;.1;0;1" repeatCount="indefinite"></animate></line></g></svg></ion-spinner></div></div></body></html>

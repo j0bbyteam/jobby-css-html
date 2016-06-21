@@ -1,0 +1,27 @@
+<ion-view view-title="Services">
+    <ion-content class="ob-page">
+        <div class="ob-content">
+            <div ng-show="trainerID == user.$id" ng-click="showAddServiceModal()" style="position: absolute; bottom: 40px; right: 40px; font-size: 40px"><i class="ion ion-plus-circled"></i></div>
+
+            <div class="ob-list">
+                <a class="ob-list-row" ng-repeat="item in items">
+                   <!--href="#/service/{{trainerID}}/{{item.$id}}">-->
+
+                    <div class="ob-list-col-img">
+                        <img class="ob-list-img"
+                             src="https://s3.amazonaws.com/com.onebody.profile/Services/{{item.$id | htmlEncode}}/display.jpg"
+                             onerror="this.src='img/emptypic-user.png'"/>
+                    </div>
+
+                    <div class="ob-list-col-flex">
+                        <div class="ob-list-text">
+                            <p>{{item.name}}</p>
+                            <p>{{item.description}}</p>
+                        </div>
+                    </div>
+
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

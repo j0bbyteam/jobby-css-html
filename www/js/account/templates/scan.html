@@ -1,0 +1,26 @@
+<ion-view view-title="Scan QR Code">
+    <ion-content class="ob-page">
+        <div class="ob-content ob-sections-vertical">
+            <div class="ob-half-section-zerobase">
+                <div class="ob-instructions ob-instructions-light">Scan QR Code<br/>or Enter a Code</div>
+            </div>
+            <div class="ob-section-zerobase ob-sections-vertical">
+                <div class="ob-section"></div>
+                <button class="ob-block-button ob-button-blue" ng-click="scanClient()">Scan QR Code</button>
+                <div class="ob-section"></div>
+            </div>
+            <div class="ob-divider"></div>
+            <div class="ob-section-zerobase ob-center-parent">
+                <div class="ob-center-vert-child">
+                    <div class="ob-form">
+                        <div class="ob-form-row ob-form-flex-row">
+                            <input class="ob-form-text-input" type="text" ng-model="clientCode.key" placeholder="Code"/>
+                        </div>
+                    </div>
+                    <button class="ob-block-button ob-button-blue" ng-click="enterCode()">Enter</button>
+                </div>
+            </div>
+            <div class="ob-half-section-zerobase"></div>
+        </div>
+    </ion-content>
+</ion-view>

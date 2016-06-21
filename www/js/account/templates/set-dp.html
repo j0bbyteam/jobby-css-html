@@ -1,0 +1,50 @@
+<ion-view view-title="Set Image">
+    <ion-content class="has-header ob-darkpurple-bg">
+        <ion-scroll min-zoom="1" delegate-handle="mainScroll" zooming="true" direction="xy" style="width: 100vw; height: 100vw" on-scroll="scrolling()">
+            <!--<div id="displayPicContainer" style="padding: 15%; width: 100%">-->
+                <img id="displayPic" src="{{s3imgLink}}" style="width: 70%; margin: 15%"/>
+            <!--</div>-->
+        </ion-scroll>
+        <div style="margin-top: -100vw; width: 100vw; height: 100vw">
+            <div style="height: 15vw; width: 100vw">
+                <div class="image-frame-first-row"></div>
+                <div class="image-frame-first-row" style="border-bottom: 1px dotted"></div>
+                <div class="image-frame-first-row" style="border-bottom: 1px dotted"></div>
+                <div class="image-frame-first-row"></div>
+            </div>
+            <div style="height: 35vw; width: 100vw">
+                <div style="border-right: 1px dotted; height: 35vw; width: 15vw; background: white; opacity: 0.5; float: left"></div>
+                <div style="width: 70vw; height: 35vw; float: left"></div>
+                <div style="height: 35vw; width: 15vw; border-left: 1px dotted; background: white; opacity: 0.5; float: left"></div>
+            </div>
+            <div style="height: 35vw; width: 100vw">
+                <div style="border-right: 1px dotted; height: 35vw; width: 15vw; background: white; opacity: 0.5; float: left"></div>
+                <div style="width: 70vw; height: 35vw; float: left"></div>
+                <div style="height: 35vw; width: 15vw; border-left: 1px dotted; background: white; opacity: 0.5; float: left"></div>
+            </div>
+            <div style="height: 15vw; width: 100vw">
+                <div class="image-frame-first-row"></div>
+                <div class="image-frame-first-row" style="border-top: 1px dotted"></div>
+                <div class="image-frame-first-row" style="border-top: 1px dotted"></div>
+                <div class="image-frame-first-row"></div>
+            </div>
+        </div>
+
+        <div class="buttongroup2">
+            <!--<button class="buttongroup2-button" ng-click="rotatemodal()"><i class="icon ion-refresh buttongroup2-icon"></i></button>-->
+            <button class="buttongroup2-button" ng-click="zoomout()"><i class="icon ion-minus buttongroup2-icon"></i></button>
+            <button class="buttongroup2-button" ng-click="zoomin()"><i class="icon ion-plus buttongroup2-icon"></i></button>
+            <!--<button class="buttongroup2-button" ng-click="cropImage(false)"><i class="icon ion-scissors buttongroup2-icon"></i></button>-->
+        </div>
+        <div class="ob-form-row ob-form-flex-row">
+            <span class="ob-form-prompt">Image Link</span>
+            <input class="ob-form-text-input" type="text" ng-model="user.imgLink" placeholder="Image Link" ng-change="imageChanged(user.imgLink)"/>
+        </div>
+
+        <div class="buttongroup2">
+            <button class="buttongroup2-button" ng-click="takeimg()"><i class="icon ion-camera buttongroup2-icon"></i></button>
+            <button class="buttongroup2-button" ng-click="fromstorage()"><i class="icon ion-images buttongroup2-icon"></i></button>
+        </div>
+        <div class="ob-block-button ob-button-blue" ng-click="cropImage(true)">Save</div>
+    </ion-content>
+</ion-view>
