@@ -1,140 +1,30 @@
-<ion-view>
+<ion-view hide-nav-bar="true" animation="slide-left-right">
     <ion-nav-title><span class="ob-nav-bar-logo"></span></ion-nav-title>
-    <ion-content class="has-header ob-bg1">
-        <ion-slide-box class="ob-slide-box"
-                       show-pager="true"
-                       pager-click="navSlide(index)"
-                       ng-init="disableSwipe()"
-                       on-slide-changed="slideChanged($index)">
-            <ion-slide>
-                <div class="ob-content">
-                    <div class="ob-instructions">Let's get started!</div>
-                    <div class="ob-form">
-                        <div class="ob-form-row ob-form-flex-row">
-                            <input class="ob-form-text-input" ng-model="newuser.username"
-                                   type="text" name="name" placeholder="Name*"/>
-                        </div>
-                        <!--<div class="ob-form-row ob-form-flex-row">-->
-                            <!--<input class="ob-form-text-input" ng-model="newuser.lastname" type="text" name="last-name" placeholder="Last Name"/>-->
-                        <!--</div>-->
-                        <div class="ob-form-row ob-form-switch-row">
-                            <button class="ob-form-switch-button"
-                                    ng-class="{'ob-form-switch-button-selected':newuser.gender === 'Female'}"
-                                    ng-click="newuser.gender = 'Female'">Female</button>
-                            <button class="ob-form-switch-button"
-                                    ng-class="{'ob-form-switch-button-selected':newuser.gender === 'Male'}"
-                                    ng-click="newuser.gender = 'Male'">Male</button>
-                        </div>
-                        <div class="ob-form-row ob-form-flex-row">
-                            <input class="ob-form-text-input" type="email"
-                                   ng-model="newuser.email" name="email" placeholder="Email*"/>
-                        </div>
-                        <div ng-hide="newuser.noPassword" class="ob-form-row ob-form-flex-row">
-                            <input class="ob-form-text-input" type="password"
-                                   ng-model="newuser.password" placeholder="Password*"/>
-                            <!--<span class="ob-form-icon ob-form-icon-password"></span>-->
-                        </div>
-                        <div ng-hide="newuser.noPassword" class="ob-form-row ob-form-flex-row">
-                            <input class="ob-form-text-input" type="password"
-                                   ng-model="newuser.confirmPassword" placeholder="Confirm Password*"/>
-                            <!--<span class="ob-form-icon ob-form-icon-password"></span>-->
-                        </div>
-                        <!--
-                        <div class="ob-form-row ob-form-flex-row">
-                            <input class="ob-form-text-input" type="password" ng-model="newuser.confirmPassword" placeholder="Confirm Password"/>
-                            <span class="ob-form-icon ob-form-icon-password"></span>
-                        </div>
-                        -->
-                        <div class="ob-form-row ob-form-switch-row">
-                            <button class="ob-form-switch-button"
-                                    ng-class="{'ob-form-switch-button-selected':newuser.group === 'Users'}"
-                                    ng-click="newuser.group = 'Users'" >User</button>
-                            <button class="ob-form-switch-button"
-                                    ng-class="{'ob-form-switch-button-selected':newuser.group === 'Trainers'}"
-                                    ng-click="newuser.group = 'Trainers'">Professional</button>
-                        </div>
-                    </div>
-                    <div class="ob-note-block">
-                        <span class="ob-note-block-left">*</span>
-                        <span class="ob-note-block-middle">Professionals can still register for sessions and classes</span>
-                        <span class="ob-note-block-right"></span>
-                    </div>
-                    <button class="ob-block-button ob-button-blue"
-                            ng-click="newuser.group === 'Users' ? register() : nextPressed()">
-                            <span ng-show="newuser.group === 'Users'">Sign up!</span>
-                            <span ng-show="newuser.group === 'Trainers'">Next</span>
-                    </button>
-<!--
-                    <button class="ob-block-button ob-button-blue"
-                            ng-show="newuser.group === 'Users'"
-                            ng-click="register()">Sign up!</button>
-                    <button class="ob-block-button ob-button-blue"
-                            ng-show="newuser.group === 'Trainers'"
-                            ng-click="nextPressed()">Next</button>
--->
-                    <a class="ob-block-text-button" href="#/prelogin/login">Already have an account?</a>
-                </div>
-            </ion-slide>
-            <ion-slide>
-                <div class="ob-content">
-                    <div class="ob-main-instructions">Professional Info</div>
-                    <!--<div class="ob-sub-instructions">What kind of fitness do you do?</div>-->
-                    <div class="ob-form">
-                        <div class="ob-form-row ob-form-flex-row">
-                            <span class="ob-form-prompt">Profession</span>
-                            <input class="ob-form-text-input" type="text" ng-model="newuser.profession" placeholder="e.g. Personal Trainer"/>
-                        </div>
-                        <!--
-                        <div class="ob-form-row ob-sectioned-row">
-                            <span class="left-prompt-text ob-blue-color">
-                                Profession
-                            </span>
-                            <span class="main-content">
-                                <div class="ob-tag-2">Personal Trainer</div>
-                                <div class="ob-tag-2">Weight Therapy</div>
-                            </span
-                            <span class="right-icon-container">
-                                <img class="small-plus-icon" src="img/event-profile/date-picker-button.png"/>
-                            </span>
-                        </div>-->
-                        <div class="ob-form-row ob-form-flex-row">
-                            <textarea class="ob-form-textarea" ng-model="newuser.info" placeholder="Tell us about yourself and your passion for fitness"></textarea>
-                        </div>
-                    </div>
-                    <button class="ob-block-button ob-button-blue" ng-click="nextPressed()">Almost Done!</button>
-                </div>
-            </ion-slide>
-            <ion-slide>
-                <div class="ob-content ob-sections-vertical">
-                    <div class="ob-main-instructions ob-section-0">Hey {{newuser.username}}!</div>
-                    <div class="ob-sub-instructions ob-section-0">Where do you train clients?</div>
-                    <!--<div class="ob-form ob-section-0-0">-->
-                        <!--<div class="ob-form-row ob-form-flex-row">-->
-                            <!--<span class="ob-form-icon ob-form-icon-magnifier"></span>-->
-                            <!--<input class="ob-form-text-input" type="search"-->
-                                   <!--name="location-search-field" placeholder="address, postal code, city, etc..."/>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <div class="ob-section">
-                        <div class="ob-form">
-                            <div class="ob-form-row ob-form-flex-row">
-                                <span class="ob-form-icon ob-form-icon-magnifier"></span>
-                                <input class="ob-form-text-input" type="text" ng-model="newuser.address" placeholder="Enter location"/>
-                            </div>
-                        </div>
-                        <div id="register-set-location-map" class="ob-block-map" data-tap-disabled="true"></div>
-                        <a style="display: none;" ng-click="centerOnMe()" class="button button-icon icon ion-android-locate"></a>
-                    </div>
-                    <div class="ob-form">
-                        <div class="ob-form-row ob-form-flex-row">
-                            <input class="ob-form-text-input" type="text" ng-model="newuser.commentlocation" placeholder="Comment on location"/>
-                        </div>
-                    </div>
+    <ion-content class="ob-bg1">
+        <div class="prelogin">
+            <a href="#/prelogin/home" title="Close" class="page-close"><i class="fa fa-times" aria-hidden="true"></i></a>
+            <h1 class="super-title">Jobby</h1>
 
-                    <button class="ob-block-button ob-button-blue ob-section-0-0" ng-click="register()">Sign up!</button>
-                    <div class="ob-section-1"></div>
+            <div class="prelogin-form">
+                <p class="title">Hello!<br/>Sign up to get started.</p>
+                <div class="list">
+                    <label class="item item-input">
+                        <input type="text" placeholder="Business Email">
+                    </label>
+                    
+                    <label class="item item-input">
+                        <input type="password" placeholder="Password">
+                    </label>
                 </div>
-            </ion-slide>
-        </ion-slide-box>
+            </div>
+            
+            <div class="connect-social">
+                <p class="divider">or Sign up using</p>
+                <a href="" class="fb-button"><i class="fa fa-facebook"></i> Facebook</a>
+                <div class="explore-app small-link">
+                    <a href="" title="Explore Jobby">Not ready to Sign Up? Explore the app.</a>
+                </div>
+            </div>
+        </div>
     </ion-content>
 </ion-view>

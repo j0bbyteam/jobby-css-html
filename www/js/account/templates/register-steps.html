@@ -1,0 +1,84 @@
+<ion-view hide-nav-bar="true" animation="slide-left-right">
+    <ion-nav-title><span class="ob-nav-bar-logo"></span></ion-nav-title>
+    <ion-content class="ob-bg1">
+        
+        <div class="prelogin register-steps">
+            <a href="#/prelogin/home" title="Close" class="page-close"><i class="fa fa-times" aria-hidden="true"></i></a>
+            <h1 class="super-title">Jobby</h1>
+
+            <ion-slide-box class="ob-slide-box" show-pager="true" pager-click="navSlide(index)" ng-init="disableSwipe()" on-slide-changed="slideChanged($index)">
+                <ion-slide>
+                    <div class="register-step step1">
+                        <p class="title">Almost there! Complete your profile to expand your network.</p>
+                        <div class="list">
+                            <label class="item item-input">
+                                <input type="text" placeholder="First Name">
+                            </label>
+                            
+                            <label class="item item-input">
+                                <input type="text" placeholder="Last Name">
+                            </label>
+
+                            <label class="item item-input">
+                                <input type="text" placeholder="Title">
+                            </label>
+
+                            <label class="item item-input">
+                                <input type="text" placeholder="Company">
+                            </label>
+                        </div>
+                    </div>
+                </ion-slide>
+
+                <ion-slide>
+                    <div class="register-step step2">
+                        <p class="title">Show off your reputation!</p>
+
+                        <ul class="social-accounts">
+                            <li>
+                                <a href="" title="Facebook" class="fb"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="" title="Twitter" class="tw"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="" title="Google+" class="gp"><i class="fa fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="" title="LinkedIn" class="li"><i class="fa fa-linkedin"></i></a>
+                            </li>    
+                        </ul>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="register-step step3">
+                        <p class="title">Upload a photo of yourself.</p>
+
+                        <a href="" title="Upload Photo" class="upload-photo">
+                            <figure>
+                                <img src="img/img_profile.png" alt="Upload Photo" title="Upload Photo">
+                            </figure>
+                        </a>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="register-step step4">
+                        <p class="title">Add your business’s photos.</p>
+
+                        <a href="" title="Upload Photo" class="upload-photo">
+                            <figure>
+                                <img src="img/img_business.png" alt="Upload Photo" title="Upload Photo">
+                            </figure>
+                        </a>
+                    </div>
+                </ion-slide>
+            </ion-slide-box>
+
+            <div class="small-link">
+                <a href="" title="Fill in later.">Fill in later.</a>
+            </div>
+            <p class="footer">By signing up you agree to Jobby’s Terms of Service and Privacy Policy, and Host Guarantee Terms.</p>
+
+        </div>
+    </ion-content>
+</ion-view>

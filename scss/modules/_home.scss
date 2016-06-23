@@ -1,0 +1,231 @@
+@font-face {
+    font-family: 'chunkfiveroman';
+    src: url('../fonts/chunkfive-webfont.woff2') format('woff2'),
+         url('../fonts/chunkfive-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sfns_displayregular';
+    src: url('../fonts/a616acbf4e599032727f5ef6f0956cdb-webfont.woff2') format('woff2'),
+         url('../fonts/a616acbf4e599032727f5ef6f0956cdb-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+$blue : #4083FF;
+$white : #fff;
+$darkgray : #4E4E4E;
+$lightgray : #9C9C9C;
+$fbblue: #25479B;
+$fadegray: #B3B3B3;
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'chunkfiveroman';
+}
+p,a {
+	font-family: 'sfns_displayregular';
+}
+
+.slider-pager {
+	.slider-pager-page {
+		color: $blue;
+	}
+}
+
+.btn {
+	color: $white;
+	background: $blue;
+	border: 1px solid $blue;
+	display: inline-block;
+	text-decoration: none;
+	width: 130px;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 15px;
+	padding: 10px 0;
+	&.btn-white {
+		background: $white;
+		color: $blue;
+	}
+}
+
+.intro-slide {
+	max-width: 480px;
+	margin: 0 auto;
+	img {
+		max-width: 100%;
+		padding-bottom: 120px;
+		width: 100%;
+	}
+	.intro-text {
+		padding: 60px 35px 0;
+		background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 100%);
+		background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 51%,rgba(255,255,255,1) 100%);
+		background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 51%,rgba(255,255,255,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+
+		position: absolute;
+		width: 100%;
+		bottom: 60px;
+
+	}
+	h1 {
+		font-size: 25px;
+		color: $darkgray;
+		max-width: 170px;
+	}
+	p {
+		font-size: 12px;
+		color: $darkgray;
+		max-width: 170px;
+	}
+}
+.intro-buttons {
+	text-align: center;
+	a {
+		margin: 0 5px;
+	}
+}
+.small-link {
+	text-align: center;
+	a {
+		font-size: 11px;
+		display: inline-block;
+		margin: 15px 0;
+	}
+}
+.prelogin {
+	padding: 25px;
+	position: relative;
+	max-width: 600px;
+	margin: 0 auto;
+	.title {
+		font-size: 15px;
+		color: $darkgray;
+		text-align: center;
+		margin: 80px 0 30px;
+	}
+	.list {
+		margin-bottom: 10px;
+		.item {
+			&:first-child {
+				border-top-right-radius: 5px;
+				border-top-left-radius: 5px;
+			}
+			&:last-child {
+				border-bottom-right-radius: 5px;
+				border-bottom-left-radius: 5px;
+			}
+		}
+	}
+}
+.prelogin-form {
+	margin-bottom: 60px;
+}
+.super-title {
+	font-size: 20px;
+	color: $blue;
+	text-align: center;
+	margin: 0;
+}
+.page-close {
+	color: $lightgray;
+	font-size: 25px;
+	position: absolute;
+	right: 10px;
+    top: 25px;
+}
+.fb-button {
+	display: inline-block;
+    background: #25479B;
+    border-radius: 5px;
+    color: #fff;
+    width: 250px;
+    margin: auto;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 0;
+    i {
+    	margin-right: 10px;
+    }
+}
+
+.connect-social {
+	text-align: center;
+	position: relative;
+	.divider {
+		color: $lightgray;
+		margin-bottom: 20px;
+		&:before,&:after {
+			background: #9c9c9c none repeat scroll 0 0;
+		    content: "";
+		    display: block;
+		    height: 1px;
+		    left: 0;
+		    position: absolute;
+		    top: 10px;
+		    width: 30%;
+		}
+		&:after {
+			right: 0;
+			left: auto;
+		}
+	}
+}
+
+.register-steps {
+	.slider-pager {
+		top: 50px;
+		bottom: auto;
+	}
+	.register-step {
+		padding: 30px 10px;
+		min-height: 380px;
+	}
+	.social-accounts {
+		text-align: center;
+		li {
+			display: inline-block;
+			margin: 0 5px;
+			a {
+				background: #D7D7D7;
+				border-radius: 50%;
+			    color: #fff;
+			    display: block;
+			    font-size: 20px;
+			    height: 40px;
+			    padding: 10px 0;
+			    text-align: center;
+			    width: 40px;
+			    &:hover,&.active {
+			    	&.fb {
+				    	background: #25479B;
+				    }
+				    &.tw {
+				    	background: #00aced;
+				    }
+				    &.gp {
+				    	background: #dd4b39;
+				    }
+				    &.li {
+				    	background: #007bb6;
+				    }
+			    }
+			    
+			}
+		}
+	}
+	.footer {
+		font-size: 9px;
+		color: $fadegray;
+		text-align: center;
+	}
+	.upload-photo {
+		text-align: center;
+		display: block;
+    	margin: 80px 0 0;
+	}
+}
