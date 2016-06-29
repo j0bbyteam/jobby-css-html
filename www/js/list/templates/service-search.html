@@ -1,39 +1,33 @@
 <ion-view hide-nav-bar="true" cache-view="false" overflow-scroll=’true’>
-    <ion-content class="ob-grey-bg">
-        <div class="ob-content">
-            <div class="ob-header ob-map-header">
-                <div class="ob-header-status-bar"></div>
-                <div class="ob-header-nav-bar">
-                    <div class="ob-header-icon-container">
-                        <a class="button button-icon icon ion-ios-arrow-back button-dark ob-header-icon" ng-click="searchOnMap()"></a>
-                    </div>
-                    <div class="ob-header-flex-area">
-                        <div class="ob-bar-search-input-container">
-                            <i class="icon ion-search ob-bar-search-input-icon-left"></i>
-                            <input type="search" class="ob-bar-search-input" placeholder="Profession, ex. Law Service, Photographer"
-                                   ng-model="searchKey" focus-me/>
-                            <i class="icon ion-ios-close-outline ob-bar-search-input-icon-right"
-                               ng-click="clearSearch()"></i>
-                        </div>
-                    </div>
-                    <div class="ob-header-icon-container"
-                         nav-transition="none">
-                        <span class="ob-header-icon">
-                        </span>
-                    </div>
-                </div>
-                <div class="ob-map-header-bottom-white-line"></div>
-            </div>
-
-            <div class="ob-list ob-map-list list">
-                <ion-item style="background-image: url({{ item.img }}); background-size : cover" ng-repeat="item in professions | filter:searchKey track by $index" ng-click="select(item)">
-                    <h1><strong>{{item.name}}</strong></h1>
-                    <p><small>Professionals near you: {{item.number}}</small></p>
-                    <!--<br/>-->
-                </ion-item>
-
-            </div>
-
-        </div>
+    <ion-content>
+    	<div class="search-list">
+    		<div class="search-list-header">
+    			<form>
+					<div class="list list-inset">
+						<label class="item item-input">
+							<i class="icon ion-search placeholder-icon"></i>
+							<input type="text" name="search-item" placeholder="What do you need done?" ng-model="searchKey" focus-me>
+						</label>
+					</div>    				
+    			</form>
+    			<div class="sub-title">
+    				<img src="img/search-list-icon.png">
+    				<p>Find the best local talent in the GTA</p>
+    			</div>
+    		</div>
+    		<div class="search-list-items">
+    			<ul>
+					<li ng-repeat="item in professions | filter:searchKey track by $index" ng-click="select(item)">
+    					<figure>
+    						<img src="img/list-item1.png" title="Tax" alt="Tax">
+    					</figure>
+    					<div class="list-item">
+    						<h2>{{item.name}}</h2>
+    						<p>Professionals near you: {{item.number}}</p>
+    					</div>
+    				</li>
+    			</ul>
+    		</div>
+    	</div>
     </ion-content>
 </ion-view>

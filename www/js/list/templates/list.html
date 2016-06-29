@@ -1,82 +1,165 @@
 <ion-view hide-nav-bar="true" cache-view="false" overflow-scroll=’true’>
-    <ion-content class="ob-grey-bg" style="background-image: url({{ img }}); background-size:cover;">
-        <div class="ob-content">
-            <div class="ob-header ob-map-header">
-                <div class="ob-header-status-bar"></div>
-                <div class="ob-header-nav-bar">
-                    <div class="ob-header-icon-container">
-                        <a class="button button-icon icon ion-ios-arrow-back button-dark ob-header-icon" href="#/menu/service-search"></a>
-                    </div>
-                    <div class="ob-header-flex-area">
-                        <div class="ob-bar-search-input-container">
-                            <i class="icon ion-search ob-bar-search-input-icon-left"></i>
-                            <input type="search" class="ob-bar-search-input" placeholder="ex. hot yoga, boxing"
-                                   ng-model="searchContainer.profession" ng-focus="onSearch()"  />
-                            <i class="icon ion-ios-close-outline ob-bar-search-input-icon-right"
-                               ng-click="clearSearch()"></i>
-                        </div>
-                    </div>
-                    <div class="ob-header-icon-container"
-                         ng-click="searchOnMap()"
-                         nav-transition="none">
-                        <span class="ob-header-icon">
-                            <i class="icon ion-ios-location light ob-header-icon-map"></i>
-                        </span>
-                    </div>
-                </div>
-                <div class="ob-map-header-bottom-white-line"></div>
-            </div><!--
-            <div class="ob-map-tabs">
-                <a class="ob-map-tab-item"
-                   ng-class="{'ob-map-tab-selected':header === 'Users'}"
-                   ng-click="clickontab('Users', $event)">&nbsp;Professionals&nbsp;</a>
-                <a class="ob-map-tab-item"
-                   ng-class="{'ob-map-tab-selected':header === 'Classes'}"
-                   ng-click="clickontab('Classes', $event)">Classes</a>
+    <ion-content>
 
-              <a class="ob-map-tab-item"
-                   ng-class="{'ob-map-tab-selected':header === 'Events'}"
-                   ng-click="clickontab('Events', $event)">Events</a>
+        <div class="category-page">
+            <h1>Caregiver</h1>
+            <div class="category-banner" style="background-image:url('img/category-banner.png')">
+                <h2>Small intro to the Industry and it’s goals</h2>
             </div>
-            -->
-            <div class="ob-list ob-map-list">
-                <div class="ob-form-row ob-form-flex-row ob-map-radiusinput">
-                    <span class="ob-form-prompt">Search</span>
-                    <input ng-model="searchContainer.searchTerms" focus-me ng-change="searchChange(searchContainer.searchTerms)" />
-                </div>
-                <div class="ob-form-row ob-form-flex-row ob-map-radiusinput">
-                    <span class="ob-form-prompt">Search Radius</span>
 
-                    <select class="ob-form-select ob-form-select-xlarge"
-                            ng-model="searchContainer.radius" ng-change="radiusChange()">
-                        <option>5</option>
-                        <option>10</option>
-                        <option>15</option>
-                        <option>20</option>
-                        <option>30</option>
-                        <option>50</option>
-                    </select>
-                    <span class="ob-form-text">{{searchContainer.radius  | number:0}}km</span>
-                    <!--<input class="ob-form-range" type="range" name="volume" min="0" max="50"-->
-                           <!--ng-change="radiusChange()" ng-model="searchContainer.radius">-->
-                </div>
-                <div class="ob-form-row ob-form-flex-row ob-map-radiusinput">
-                    <span class="ob-form-prompt">Orderby</span>
+            <div class="category-options">
+                <div class="list">
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            Distance from you
+                        </div>
+                        <select> 
+                            <option>10KM</option>
+                            <option selected>30KM</option>
+                            <option>50KM</option>
+                            <option>100KM</option>
+                            <option>150KM</option>
+                            <option>200KM</option>
+                        </select>
+                    </label>
 
-                    <select class="ob-form-select ob-form-select-xlarge"
-                            ng-model="searchContainer.predicate" ng-change="predicateChange(predicate)">
-                        <option value="distance">distance</option>
-                        <option value="numOfReviews">number of reviews</option>
-                        <option value="rating">rating</option>
-                        <option value="totalRating">popularity</option>
-                    </select>
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            Order By
+                        </div>
+                        <select>
+                            <option>Cheapest</option>
+                            <option selected>Nearest</option>
+                            <option>Highly Rated</option>
+                        </select>
+                    </label>
+
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            Category
+                        </div>
+                        <select>
+                            <option>Tax</option>
+                            <option selected>Mechanic</option>
+                            <option>Cleaners</option>
+                            <option>Caregiver</option>
+                            <option>Wedding Planner</option>
+                        </select>
+                    </label>
                 </div>
-                <!--<div id="reactList"></div>-->
-                <a class="ob-list-row ob-map-list-row"
-                   ng-repeat="item in array | orderBy:predicate:reverse | filter:searchContainer.searchTerms | filter:searchContainer.profession track by $index"
-                   href="{{item.href}}">
+            </div>
+
+            <div class="list-providers">
+                <ul>
+                    <li>
+                        <a href="" ng-repeat="item in array | orderBy:predicate:reverse | filter:searchContainer.searchTerms | filter:searchContainer.profession track by $index" href="{{item.href}}">
+                            <figure>
+                                <img src="img/profile-img.png"/>
+                            </figure>
+                            <div class="provider-desc">
+                                <div class="name">
+                                    <h3>Sarah Smith</h3><span>Here to Care</span>
+                                </div>
+                                <ul class="skills">
+                                    <li>12 Year Experience</li>
+                                    <li>Willing to travel</li>
+                                    <li>Triple threat</li>
+                                </ul>
+                                <div class="options">
+                                    <div class="distance">
+                                        3.1 KM
+                                    </div>
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half-o"></i>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" class="favourites"><i class="fa fa-heart-o"></i></a>
+                    </li>
+
+                    <li>
+                        <a href="" ng-repeat="item in array | orderBy:predicate:reverse | filter:searchContainer.searchTerms | filter:searchContainer.profession track by $index" href="{{item.href}}">
+                            <figure>
+                                <img src="img/profile-img.png"/>
+                            </figure>
+                            <div class="provider-desc">
+                                <div class="name">
+                                    <h3>Sarah Smith</h3><span>Here to Care</span>
+                                </div>
+                                <ul class="skills">
+                                    <li>12 Year Experience</li>
+                                    <li>Willing to travel</li>
+                                    <li>Triple threat</li>
+                                </ul>
+                                <div class="options">
+                                    <div class="distance">
+                                        3.1 KM
+                                    </div>
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half-o"></i>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" class="favourites"><i class="fa fa-heart-o"></i></a>
+                    </li>
+
+                    <li>
+                        <a href="" ng-repeat="item in array | orderBy:predicate:reverse | filter:searchContainer.searchTerms | filter:searchContainer.profession track by $index" href="{{item.href}}">
+                            <figure>
+                                <img src="img/profile-img.png"/>
+                            </figure>
+                            <div class="provider-desc">
+                                <div class="name">
+                                    <h3>Sarah Smith</h3><span>Here to Care</span>
+                                </div>
+                                <ul class="skills">
+                                    <li>12 Year Experience</li>
+                                    <li>Willing to travel</li>
+                                    <li>Triple threat</li>
+                                </ul>
+                                <div class="options">
+                                    <div class="distance">
+                                        3.1 KM
+                                    </div>
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half-o"></i>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" class="favourites"><i class="fa fa-heart-o"></i></a>
+                    </li>
+                </ul>
+                
+            </div>
+
+        </div>
+
+        
+
+        
+        <!--
+        <a class="ob-list-row ob-map-list-row"
+                   >
                     <div class="ob-list-col-img">
-                        <img class="ob-list-img" src="https://s3.amazonaws.com/com.onebody.profile/Users/{{item.$id | htmlEncode}}/profilepic.jpg"/>
+                        
                     </div>
                     <div class="ob-list-col-flex">
                         <div class="ob-list-text">
@@ -101,7 +184,6 @@
                         </div>
                     </div>
                 </a>
-            </div>
-        </div>
+            -->
     </ion-content>
 </ion-view>

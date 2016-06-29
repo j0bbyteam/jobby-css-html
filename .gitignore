@@ -1,1 +1,3 @@
 node_modules/*
+_designs/*
+node/node_modules/*

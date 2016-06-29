@@ -195,3 +195,156 @@ p, a {
   text-align: center;
   display: block;
   margin: 80px 0 0; }
+
+.search-list-header {
+  height: 120px;
+  background: #4083FF;
+  text-align: center; }
+  .search-list-header form {
+    margin: auto;
+    padding: 10px 0 15px;
+    width: 90%; }
+    .search-list-header form .list {
+      border-radius: 5px; }
+      .search-list-header form .list .item {
+        border-radius: 5px;
+        padding: 0 0 0 16px; }
+    .search-list-header form input[type="text"] {
+      height: 30px; }
+  .search-list-header .sub-title img, .search-list-header .sub-title p {
+    display: inline-block;
+    vertical-align: middle; }
+  .search-list-header .sub-title p {
+    color: #fff;
+    margin: 0 0 0 10px; }
+
+.search-list-items ul {
+  padding: 10px; }
+  .search-list-items ul li {
+    border-bottom: 1px solid #E0E0E0;
+    padding: 13px 0; }
+    .search-list-items ul li figure, .search-list-items ul li .list-item {
+      display: inline-block;
+      vertical-align: middle; }
+    .search-list-items ul li figure {
+      width: 20%;
+      text-align: center; }
+    .search-list-items ul li .list-item {
+      width: 78%; }
+      .search-list-items ul li .list-item h2 {
+        color: #4E4E4E;
+        font-size: 20px;
+        margin: 0 0 10px; }
+      .search-list-items ul li .list-item p {
+        color: #9C9C9C;
+        font-size: 13px;
+        margin: 0; }
+    .search-list-items ul li:hover, .search-list-items ul li .activated {
+      background: rgba(64, 131, 255, 0.1); }
+
+.category-page h1 {
+  font-size: 17px;
+  font-family: 'sfns_displayregular';
+  text-align: center;
+  margin: 10px 0; }
+
+.category-banner {
+  height: 140px;
+  background-size: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center; }
+  .category-banner h2 {
+    font-size: 21px;
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+    color: #fff; }
+
+.category-options .input-label {
+  color: #555555;
+  font-size: 15px; }
+
+.category-options .item-select::after {
+  border: none; }
+
+.category-options select {
+  color: #4083FF;
+  font-size: 15px;
+  padding: 0 16px; }
+
+.list-providers ul {
+  padding: 0 10px; }
+  .list-providers ul li {
+    position: relative;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 0; }
+    .list-providers ul li a {
+      text-decoration: none;
+      color: #000; }
+    .list-providers ul li figure, .list-providers ul li .provider-desc {
+      display: inline-block;
+      vertical-align: middle; }
+    .list-providers ul li figure {
+      width: 25%;
+      text-align: center; }
+      .list-providers ul li figure img {
+        max-width: 100%;
+        border-radius: 5px; }
+    .list-providers ul li .provider-desc {
+      width: 73%; }
+    .list-providers ul li .name h3 {
+      font-size: 17px;
+      font-weight: normal;
+      font-family: 'sfns_displayregular';
+      margin: 0;
+      display: inline-block;
+      margin-right: 10px; }
+    .list-providers ul li .name span {
+      font-size: 14px; }
+    .list-providers ul li .skills {
+      padding: 3px 0; }
+      .list-providers ul li .skills li {
+        list-style: none;
+        display: inline-block;
+        font-size: 12px;
+        border: none;
+        padding: 0 3px; }
+        .list-providers ul li .skills li:before {
+          content: "\f111";
+          font: normal normal normal 7px/1 FontAwesome;
+          left: -4px;
+          position: relative;
+          top: -1px; }
+    .list-providers ul li .distance, .list-providers ul li .rating {
+      display: inline-block;
+      vertical-align: middle; }
+    .list-providers ul li .rating {
+      color: #FFBF00; }
+    .list-providers ul li .distance {
+      font-size: 12px;
+      margin-right: 20px; }
+    .list-providers ul li .favourites {
+      bottom: 10px;
+      position: absolute;
+      right: 5px;
+      color: #e0e0e0; }
+      .list-providers ul li .favourites:hover {
+        color: red; }
+
+.tabs {
+  height: 52px; }
+  .tabs .tab-item {
+    padding: 5px 0; }
+    .tabs .tab-item .icon {
+      font-size: 24px;
+      height: 28px; }
+    .tabs .tab-item .tab-title {
+      font-size: 10px; }
