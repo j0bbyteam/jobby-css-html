@@ -1,0 +1,56 @@
+<!doctype html>
+<meta charset="utf-8"/>
+<title>React Tabs</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+<!--<script src=""></script>-->
+<link href="css/style.css" rel="stylesheet">
+
+<link href="browserify/node_modules/rc-collapse/assets/index.css" rel="stylesheet">
+<link href="browserify/bower_components/slick-carousel/slick/slick.css" rel="stylesheet">
+<link href="browserify/bower_components/slick-carousel/slick/slick-theme.css" rel="stylesheet">
+
+<body>
+    <div id="reactSlider"></div>
+    <div style="margin-top: 50px">
+        <button ng-click="scrollTo('description')">Description</button>
+        <button ng-click="scrollTo('about')">About</button>
+        <button ng-click="scrollTo('reviews')">Reviews</button>
+    </div>
+
+    <div id="description"></div>
+    <div id="about"></div>
+    <div id="reviews"></div>
+</body>
+<script src="browserify/bundle.js"></script>
+<script>
+    var user = {
+        $id: "33a4cc08-5659-470b-a660-bbbdbb501ac4",
+        address: "540 Sherbourne St, Toronto, ON M4X 1L2, Canada",
+        curlocation: [43.64722241, -79.37402860000002],
+        email: "a@q.com",
+        group: "Trainers",
+        imgLink: "http://i.ebayimg.com/00/s/MTkwWDE4MA==/z/3fQAAOSwwpdW8SEJ/$_35.JPG",
+        info: "I am a professional tax guy. I file tax everyday",
+        latitude: 43.6691204,
+        location: [43.64722241, -79.37402860000002],
+        longitude: -79.3759403,
+        modified: 1463544992498,
+        normalRate: 3,
+        position: [43.64722241, -79.37402860000002],
+        primeRate: 5,
+        profession: "tax",
+        username: "qqqqq",
+        youtubeLink: "cQ5SJRiDEhU"
+    };
+    renderAbout(user);
+    renderSlider();
+    renderDescription(user, 55.4, 5, 4.3);
+
+    var services = [{$id: "a", name: "name a", description: "name a description"}, {$id: "b", name: "name b", description: "name b description"}];
+    var reviews = [{$id: "ra", serviceId: "a", username: "user a", text: "some text a"}, {$id: "rb", serviceId: "a", username: "user b", text: "some text b"}]
+    renderReview(services, reviews);
+
+</script>
