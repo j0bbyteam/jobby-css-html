@@ -230,3 +230,230 @@ p,a {
     	margin: 80px 0 0;
 	}
 }
+
+.view-head {
+	background: #F9F9F9;
+	padding: 15px 0;
+	text-align: center;
+	overflow: hidden;
+	font-size: 16px;
+	a {
+		color: #387ef5;
+		text-decoration: none;
+	}
+	.option-left {
+		float: left;
+		margin-left: 10px;
+		z-index: 1;
+		position: relative;
+		i {
+			margin-right: 5px;
+		}
+	}
+	.option-right {
+		float: right;
+		margin-right: 10px;
+		z-index: 1;
+		position: relative;
+		i {
+			margin-left: 5px;
+		}
+	}
+	.title {
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto;
+		color: #030303;
+	}
+}
+
+.item {
+	h2 {
+		font-family: 'sfns_displayregular';
+		span {
+			font-size: 14px;
+			font-weight: normal;
+			color: #7A7A7A;
+		}
+	}
+	span.time {
+		color: #8e8e93;
+	    font-size: 14px;
+	    position: absolute;
+	    right: 10px;
+	    top: 15px;
+	}
+}
+
+.item-icon-right .icon-accessory {
+    right: 3px;
+    top: 10px;
+}
+.item-complex.item-icon-right .item-content {
+    padding-right: 65px;
+}
+
+
+.message-input {
+	position: fixed;
+	width: 100%;
+	.button {
+		background: none;
+		color: #387ef5;
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    z-index: 2;
+	}
+	.icon {
+	    font-size: 30px;
+	    line-height: 1;
+	}
+	input[type="text"] {
+		padding-right: 54px;
+	}
+}
+
+.message-list {
+	.message-row {
+		overflow: hidden;
+		margin: 10px;
+		p {
+			margin: 0;
+			float: right;
+			background: #4083FF;
+			color: #fff;
+			border-radius: 20px;
+			padding: 10px 15px;
+			max-width: 80%;
+		}
+		&.incoming {
+			p {
+				background: #44DB5E;
+				float: left;
+			}
+		}
+	}
+	
+}
+
+.order-job {
+	padding: 30px 0;
+	.title {
+		font-size: 14px;
+		color: #000;
+		padding: 0 10px;
+		margin: 30px 0 10px;
+		&.center {
+			text-align: center;
+		}
+	}
+
+	.service-list {
+		padding: 0;
+		margin: 0;
+		li {
+			a {
+				display: block;
+				font-size: 20px;
+				color: $blue;
+				padding: 15px 10px;
+				text-decoration: none;
+				font-family: 'chunkfiveroman';
+				font-weight: bold;
+				border-bottom: 1px solid #E0E0E0;
+				span {
+					font-size: 14px;
+					color: #6E6E6E;
+					margin-left: 5px;
+					font-family: 'sfns_displayregular';
+					font-weight: normal;
+				}
+				&:hover {
+					background: rgba(0,0,0,0.04);
+				}
+			}
+		}
+	}
+
+	.book-date {
+		position: relative;
+		p {
+			font-size: 17px;
+			margin: 0 10px;
+			border-bottom: 1px solid #E0E0E0;
+			padding: 0 0 10px;
+		}
+		a {
+			position: absolute;
+			right: 10px;
+			top: 0;
+			color: $blue;
+			text-decoration: none;
+		}
+	}
+
+	.time-list {
+		padding: 0;
+		margin: 0;
+		li {
+			a {
+				display: block;
+				font-size: 17px;
+				color: $blue;
+				padding: 15px 10px;
+				text-decoration: none;
+				border-bottom: 1px solid #E0E0E0;
+				&:hover {
+					background: rgba(0,0,0,0.04);
+				}
+			}
+		}
+	}
+
+	a.order-btn {
+		display: block;
+		padding: 7px 10px;
+		border: 1px solid $blue;
+		border-radius: 5px;
+		text-align: center;
+		margin: 20px 10px 0;
+		text-decoration: none;
+		font-size: 16px;
+		position: relative;
+		i {
+			position: absolute;
+			left: 10px;
+		}
+	}
+
+	.order-summary {
+		.order-summary-item {
+			border-bottom: 1px solid #E0E0E0;
+			margin: 10px 0;
+    		padding: 0 0 15px;
+			h2 {
+				font-size: 20px;
+				margin: 0;
+			}
+			a {
+				font-size: 17px;
+				color: $blue;
+				display: block;
+				text-align: right;
+				text-decoration: none;
+			}
+			p.time {
+				font-size: 17px;
+				margin: 0;
+			}
+			p.price {
+				text-align: right;
+				margin: 0;
+				font-size: 23px;
+			}
+		}
+	}
+}
+	

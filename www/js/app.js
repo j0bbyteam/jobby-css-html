@@ -104,6 +104,26 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
               }
           }
       })
+
+      .state('prelogin.newmsg', {
+          url: "/new-message",
+          views: {
+              'prelogin': {
+                  templateUrl: "js/account/templates/message.html",
+                  controller: 'AccountCtrl'
+              }
+          }
+      })
+
+      .state('prelogin.orderjob', {
+          url: "/orderjob",
+          views: {
+              'prelogin': {
+                  templateUrl: "js/account/templates/order-job.html",
+                  controller: 'AccountCtrl'
+              }
+          }
+      })
       
       .state('tab.service-search', {
           url: '/service-search',

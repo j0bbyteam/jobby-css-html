@@ -196,6 +196,176 @@ p, a {
   display: block;
   margin: 80px 0 0; }
 
+.view-head {
+  background: #F9F9F9;
+  padding: 15px 0;
+  text-align: center;
+  overflow: hidden;
+  font-size: 16px; }
+  .view-head a {
+    color: #387ef5;
+    text-decoration: none; }
+  .view-head .option-left {
+    float: left;
+    margin-left: 10px;
+    z-index: 1;
+    position: relative; }
+    .view-head .option-left i {
+      margin-right: 5px; }
+  .view-head .option-right {
+    float: right;
+    margin-right: 10px;
+    z-index: 1;
+    position: relative; }
+    .view-head .option-right i {
+      margin-left: 5px; }
+  .view-head .title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #030303; }
+
+.item h2 {
+  font-family: 'sfns_displayregular'; }
+  .item h2 span {
+    font-size: 14px;
+    font-weight: normal;
+    color: #7A7A7A; }
+
+.item span.time {
+  color: #8e8e93;
+  font-size: 14px;
+  position: absolute;
+  right: 10px;
+  top: 15px; }
+
+.item-icon-right .icon-accessory {
+  right: 3px;
+  top: 10px; }
+
+.item-complex.item-icon-right .item-content {
+  padding-right: 65px; }
+
+.message-input {
+  position: fixed;
+  width: 100%; }
+  .message-input .button {
+    background: none;
+    color: #387ef5;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2; }
+  .message-input .icon {
+    font-size: 30px;
+    line-height: 1; }
+  .message-input input[type="text"] {
+    padding-right: 54px; }
+
+.message-list .message-row {
+  overflow: hidden;
+  margin: 10px; }
+  .message-list .message-row p {
+    margin: 0;
+    float: right;
+    background: #4083FF;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 15px;
+    max-width: 80%; }
+  .message-list .message-row.incoming p {
+    background: #44DB5E;
+    float: left; }
+
+.order-job {
+  padding: 30px 0; }
+  .order-job .title {
+    font-size: 14px;
+    color: #000;
+    padding: 0 10px;
+    margin: 30px 0 10px; }
+    .order-job .title.center {
+      text-align: center; }
+  .order-job .service-list {
+    padding: 0;
+    margin: 0; }
+    .order-job .service-list li a {
+      display: block;
+      font-size: 20px;
+      color: #4083FF;
+      padding: 15px 10px;
+      text-decoration: none;
+      font-family: 'chunkfiveroman';
+      font-weight: bold;
+      border-bottom: 1px solid #E0E0E0; }
+      .order-job .service-list li a span {
+        font-size: 14px;
+        color: #6E6E6E;
+        margin-left: 5px;
+        font-family: 'sfns_displayregular';
+        font-weight: normal; }
+      .order-job .service-list li a:hover {
+        background: rgba(0, 0, 0, 0.04); }
+  .order-job .book-date {
+    position: relative; }
+    .order-job .book-date p {
+      font-size: 17px;
+      margin: 0 10px;
+      border-bottom: 1px solid #E0E0E0;
+      padding: 0 0 10px; }
+    .order-job .book-date a {
+      position: absolute;
+      right: 10px;
+      top: 0;
+      color: #4083FF;
+      text-decoration: none; }
+  .order-job .time-list {
+    padding: 0;
+    margin: 0; }
+    .order-job .time-list li a {
+      display: block;
+      font-size: 17px;
+      color: #4083FF;
+      padding: 15px 10px;
+      text-decoration: none;
+      border-bottom: 1px solid #E0E0E0; }
+      .order-job .time-list li a:hover {
+        background: rgba(0, 0, 0, 0.04); }
+  .order-job a.order-btn {
+    display: block;
+    padding: 7px 10px;
+    border: 1px solid #4083FF;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px 10px 0;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative; }
+    .order-job a.order-btn i {
+      position: absolute;
+      left: 10px; }
+  .order-job .order-summary .order-summary-item {
+    border-bottom: 1px solid #E0E0E0;
+    margin: 10px 0;
+    padding: 0 0 15px; }
+    .order-job .order-summary .order-summary-item h2 {
+      font-size: 20px;
+      margin: 0; }
+    .order-job .order-summary .order-summary-item a {
+      font-size: 17px;
+      color: #4083FF;
+      display: block;
+      text-align: right;
+      text-decoration: none; }
+    .order-job .order-summary .order-summary-item p.time {
+      font-size: 17px;
+      margin: 0; }
+    .order-job .order-summary .order-summary-item p.price {
+      text-align: right;
+      margin: 0;
+      font-size: 23px; }
+
 .search-list-header {
   height: 120px;
   background: #4083FF;
