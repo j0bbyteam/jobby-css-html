@@ -366,6 +366,163 @@ p, a {
       margin: 0;
       font-size: 23px; }
 
+.profile-tabs {
+  padding: 0;
+  margin: 0;
+  text-align: center; }
+  .profile-tabs li {
+    display: inline-block;
+    width: 48%; }
+    .profile-tabs li a {
+      display: block;
+      text-decoration: none;
+      font-size: 13px;
+      color: #8C8C8C;
+      border-bottom: 1px solid #8C8C8C;
+      padding: 10px; }
+      .profile-tabs li a.active {
+        color: #000;
+        border-bottom: 1px solid #000; }
+
+#react-about {
+  padding: 0 10px;
+  margin: 30px 0; }
+  #react-about figure, #react-about .profile-details {
+    display: inline-block;
+    vertical-align: middle; }
+  #react-about figure {
+    width: 25%; }
+    #react-about figure img {
+      max-width: 100%;
+      border-radius: 50%; }
+  #react-about .profile-details {
+    width: 75%;
+    padding: 0 0 0 20px; }
+    #react-about .profile-details h2 {
+      font-size: 22px;
+      color: #434343;
+      font-weight: 400;
+      font-family: 'sfns_displayregular';
+      margin: 0; }
+    #react-about .profile-details p {
+      margin: 0;
+      font-size: 15px;
+      color: #434343; }
+    #react-about .profile-details span {
+      display: block;
+      margin: 0;
+      font-size: 14px;
+      color: #434343; }
+    #react-about .profile-details .rating {
+      color: #FFBF00; }
+  #react-about .profile-extras {
+    margin-top: 15px; }
+    #react-about .profile-extras .distance, #react-about .profile-extras .city {
+      font-size: 13px;
+      color: #434343; }
+    #react-about .profile-extras .distance {
+      margin-right: 20px; }
+  #react-about .description {
+    font-size: 15px;
+    color: #434343;
+    margin-top: 20px; }
+    #react-about .description p {
+      height: 60px;
+      position: relative;
+      overflow: hidden; }
+      #react-about .description p:after {
+        content: "";
+        width: 100%;
+        height: 40px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%);
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); }
+    #react-about .description a {
+      bottom: -25px;
+      font-size: 14px;
+      position: absolute;
+      right: 20px;
+      text-decoration: none; }
+  #react-about .ask {
+    margin-top: 20px; }
+    #react-about .ask a {
+      text-decoration: none;
+      font-size: 14px;
+      color: #4083FF; }
+      #react-about .ask a i {
+        margin-right: 5px; }
+  #react-about .social-links {
+    margin: 20px 0;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 20px; }
+    #react-about .social-links p {
+      color: #000;
+      font-size: 12px; }
+    #react-about .social-links ul li {
+      display: inline-block;
+      margin-right: 20px; }
+      #react-about .social-links ul li a {
+        font-size: 24px;
+        color: #000; }
+
+.service-list {
+  margin: 0 10px; }
+  .service-list li {
+    margin-bottom: 20px; }
+    .service-list li h2 {
+      margin: 0; }
+      .service-list li h2 a {
+        font-family: 'chunkfiveroman';
+        color: #000;
+        text-decoration: none;
+        font-size: 20px; }
+    .service-list li .service-details {
+      padding: 20px 0; }
+      .service-list li .service-details .service-options {
+        margin-bottom: 15px; }
+        .service-list li .service-details .service-options span {
+          margin-right: 5px; }
+          .service-list li .service-details .service-options span.badge {
+            text-transform: uppercase;
+            background: #00D171;
+            color: #fff; }
+      .service-list li .service-details p {
+        font-size: 15px;
+        color: #434343; }
+
+.profile-reviews {
+  margin: 0 10px; }
+  .profile-reviews .review-overview {
+    text-align: center; }
+    .profile-reviews .review-overview h3 {
+      font-family: 'sfns_displayregular';
+      font-weight: normal;
+      font-size: 10px; }
+    .profile-reviews .review-overview .rating span {
+      display: block;
+      font-size: 11px; }
+  .profile-reviews .rating i {
+    color: #FFBF00; }
+
+.order-btn {
+  bottom: 0;
+  display: block;
+  position: fixed;
+  width: 100%;
+  z-index: 2; }
+  .order-btn a {
+    display: block;
+    color: #fff;
+    background: #4083FF;
+    padding: 20px 0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px; }
+
 .search-list-header {
   height: 120px;
   background: #4083FF;

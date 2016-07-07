@@ -8,7 +8,7 @@ var ReactSlider = React.createClass({
     },
     render: function() {
         var settings = {
-            dots: true,
+            dots: false,
             arrows: false
         };
         var divStyle = {

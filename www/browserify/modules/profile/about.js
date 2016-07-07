@@ -13,23 +13,38 @@ const About = React.createClass({
     render() {
         return (
             <div id="react-about">
-                {this.showUserImg()}
-                <h5>
-                    About this provider
-                </h5>
-                <h3>
-                    {this.props.user.username}
-                </h3>
-                <h4>
-                    {this.props.user.job}
-                </h4>
-                <p>
-                    {this.props.user.city}
-                </p>
-                <p>
-                    {this.props.user.personal}
-                </p>
-                <button>Ask a question</button>
+                <figure>
+                    {this.showUserImg()}
+                </figure>
+                <div className="profile-details">
+                    <h2> {this.props.user.username} </h2>
+                    <p>Here to Care{this.props.user.companyName}</p>
+                    <span>Professional Nanny{this.props.user.job}</span>
+                    <div className="rating"><i className="fa fa-star"></i>
+                                        <i className="fa fa-star"></i>
+                                        <i className="fa fa-star"></i>
+                                        <i className="fa fa-star"></i>
+                                        <i className="fa fa-star-half-o"></i></div>
+                    <span>{this.props.user.personal}</span>
+                </div>
+                <div className="profile-extras">
+                    <span className="distance">31km from you</span>
+                    <span className="city">Toronto, Ontario{this.props.user.city}</span>
+                </div>
+                <div className="description">
+                    <p>A 4-6 line paragraph talking about Sarah’s experience and accomplishments over the years, preferably in third person A 4-6 line paragraph talking about Sarah’s experience and accomplishments over the years, preferably in third person</p>
+                    <a href="javascript:void(0)" title="Show More">Show More</a>
+                </div>
+                <div className="ask"><a href=""><i className="ion-chatbubbles"></i>Ask a question</a></div>
+                <div className="social-links">
+                    <p>Learn more about Sarah</p>
+                    <ul>
+
+                        <li><a href=""><i className="ion-social-twitter"></i></a></li>
+                        <li><a href=""><i className="ion-social-facebook"></i></a></li>
+                        <li><a href=""><i className="ion-social-googleplus"></i></a></li>
+                    </ul>
+                </div>
             </div>
         )
     }

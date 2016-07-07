@@ -75,7 +75,7 @@ const ReviewAccordion = React.createClass({
         const btn = accordion ? 'accordion' : 'collapse';
         const activeKey = this.state.activeKey;
         return (
-            <div style={{ margin: 80, width: 400 }}>
+            <div>
                 <Collapse
                     accordion={accordion}
                     onChange={this.onChange}

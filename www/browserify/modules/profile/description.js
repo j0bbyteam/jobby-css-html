@@ -57,17 +57,13 @@ const Description = React.createClass({
     render() {
         return (
             <div id="react-description">
-                <h1>
-                    {this.props.user.companyName}
-                </h1>
+                <h1> {this.props.user.companyName} </h1>
                 <h2>
                     in {this.props.user.profession}
                 </h2>
                 <p>
                     {this.showDistance()}
-                    <span className="profile-reviews-item">
-                        {this.serviceProviderStars()}
-                    </span>
+                    <span className="profile-reviews-item"> {this.serviceProviderStars()} </span>
                     <span class="profile-reviews-count">{this.props.numOfReviews} Reviews</span>
                 </p>
                 <p>

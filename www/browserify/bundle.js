@@ -67,36 +67,126 @@ var About = _react2.default.createClass({
         return _react2.default.createElement(
             'div',
             { id: 'react-about' },
-            this.showUserImg(),
             _react2.default.createElement(
-                'h5',
+                'figure',
                 null,
-                'About this provider'
+                this.showUserImg()
             ),
             _react2.default.createElement(
-                'h3',
-                null,
-                this.props.user.username
+                'div',
+                { className: 'profile-details' },
+                _react2.default.createElement(
+                    'h2',
+                    null,
+                    ' ',
+                    this.props.user.username,
+                    ' '
+                ),
+                _react2.default.createElement(
+                    'p',
+                    null,
+                    'Here to Care',
+                    this.props.user.companyName
+                ),
+                _react2.default.createElement(
+                    'span',
+                    null,
+                    'Professional Nanny',
+                    this.props.user.job
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'rating' },
+                    _react2.default.createElement('i', { className: 'fa fa-star' }),
+                    _react2.default.createElement('i', { className: 'fa fa-star' }),
+                    _react2.default.createElement('i', { className: 'fa fa-star' }),
+                    _react2.default.createElement('i', { className: 'fa fa-star' }),
+                    _react2.default.createElement('i', { className: 'fa fa-star-half-o' })
+                ),
+                _react2.default.createElement(
+                    'span',
+                    null,
+                    this.props.user.personal
+                )
             ),
             _react2.default.createElement(
-                'h4',
-                null,
-                this.props.user.job
+                'div',
+                { className: 'profile-extras' },
+                _react2.default.createElement(
+                    'span',
+                    { className: 'distance' },
+                    '31km from you'
+                ),
+                _react2.default.createElement(
+                    'span',
+                    { className: 'city' },
+                    'Toronto, Ontario',
+                    this.props.user.city
+                )
             ),
             _react2.default.createElement(
-                'p',
-                null,
-                this.props.user.city
+                'div',
+                { className: 'description' },
+                _react2.default.createElement(
+                    'p',
+                    null,
+                    'A 4-6 line paragraph talking about Sarah’s experience and accomplishments over the years, preferably in third person A 4-6 line paragraph talking about Sarah’s experience and accomplishments over the years, preferably in third person'
+                ),
+                _react2.default.createElement(
+                    'a',
+                    { href: 'javascript:void(0)', title: 'Show More' },
+                    'Show More'
+                )
             ),
             _react2.default.createElement(
-                'p',
-                null,
-                this.props.user.personal
+                'div',
+                { className: 'ask' },
+                _react2.default.createElement(
+                    'a',
+                    { href: '' },
+                    _react2.default.createElement('i', { className: 'ion-chatbubbles' }),
+                    'Ask a question'
+                )
             ),
             _react2.default.createElement(
-                'button',
-                null,
-                'Ask a question'
+                'div',
+                { className: 'social-links' },
+                _react2.default.createElement(
+                    'p',
+                    null,
+                    'Learn more about Sarah'
+                ),
+                _react2.default.createElement(
+                    'ul',
+                    null,
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { href: '' },
+                            _react2.default.createElement('i', { className: 'ion-social-twitter' })
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { href: '' },
+                            _react2.default.createElement('i', { className: 'ion-social-facebook' })
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { href: '' },
+                            _react2.default.createElement('i', { className: 'ion-social-googleplus' })
+                        )
+                    )
+                )
             )
         );
     }
@@ -214,7 +304,7 @@ var ReviewAccordion = _react2.default.createClass({
         var activeKey = this.state.activeKey;
         return _react2.default.createElement(
             'div',
-            { style: { margin: 80, width: 400 } },
+            null,
             _react2.default.createElement(
                 _rcCollapse2.default,
                 {
@@ -313,7 +403,9 @@ var Description = _react2.default.createClass({
             _react2.default.createElement(
                 'h1',
                 null,
-                this.props.user.companyName
+                ' ',
+                this.props.user.companyName,
+                ' '
             ),
             _react2.default.createElement(
                 'h2',
@@ -328,7 +420,9 @@ var Description = _react2.default.createClass({
                 _react2.default.createElement(
                     'span',
                     { className: 'profile-reviews-item' },
-                    this.serviceProviderStars()
+                    ' ',
+                    this.serviceProviderStars(),
+                    ' '
                 ),
                 _react2.default.createElement(
                     'span',
@@ -369,7 +463,7 @@ var ReactSlider = _react2.default.createClass({
     },
     render: function render() {
         var settings = {
-            dots: true,
+            dots: false,
             arrows: false
         };
         var divStyle = {

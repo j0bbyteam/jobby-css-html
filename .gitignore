@@ -1,3 +1,5 @@
 node_modules/*
 _designs/*
 node/node_modules/*
+www/browserify/bower_components/*
+www/browserify/node_modules/*

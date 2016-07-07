@@ -5,24 +5,167 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="lib/ionic/css/ionic.css" rel="stylesheet">
+<link href="css/ionic.app.css" rel="stylesheet">
+<!--<script src=""></script>-->
 <!--<script src=""></script>-->
 <link href="css/style.css" rel="stylesheet">
 
 <link href="browserify/node_modules/rc-collapse/assets/index.css" rel="stylesheet">
 <link href="browserify/bower_components/slick-carousel/slick/slick.css" rel="stylesheet">
 <link href="browserify/bower_components/slick-carousel/slick/slick-theme.css" rel="stylesheet">
+<style type="text/css">
+    html,body {
+        overflow: auto;
 
+    }
+</style>
 <body>
     <div id="reactSlider"></div>
-    <div style="margin-top: 50px">
-        <button ng-click="scrollTo('description')">Description</button>
-        <button ng-click="scrollTo('about')">About</button>
-        <button ng-click="scrollTo('reviews')">Reviews</button>
+    <ul class="profile-tabs">
+        <li>
+            <a href="#" ng-click="scrollTo('description')" class="active">Provider</a>
+        </li>
+        <li>
+            <a href="#" ng-click="scrollTo('about')">Services</a>
+        </li>
+    </ul>
+    <div id="about"></div>
+
+    <div id="services">
+        <div id="react-services">
+            <ul class="service-list">
+                <li>
+                    <h2><a href="" title="Senior Care">Dog Walker</a></h2>
+                    <div class="service-details">
+                        <div class="service-options">
+                            <span class="price">$20/hr</span>
+                            <span class="rating">
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star-half-o"></i>
+                            </span>
+                            <span class="review-count">(27 Reviews)</span>
+                            <span class="badge">Popular</span>
+                        </div>
+                        <p>Do you know a senior or child who needs a helping hand to get things done around the house? I am certified to take care of patients suffering from Alzheimer’s, common illness, surgery, and hospitalization. We can help!</p>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="" title="Senior Care">Child Care</a></h2>
+                    <div class="service-details">
+                        <div class="service-options">
+                            <span class="price">$20/hr</span>
+                            <span class="rating">
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star-half-o"></i>
+                            </span>
+                            <span class="review-count">(27 Reviews)</span>
+                            <span class="badge">Popular</span>
+                        </div>
+                        <p>Do you know a senior or child who needs a helping hand to get things done around the house? I am certified to take care of patients suffering from Alzheimer’s, common illness, surgery, and hospitalization. We can help!</p>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="" title="Senior Care">Senior Care</a></h2>
+                    <div class="service-details">
+                        <div class="service-options">
+                            <span class="price">$20/hr</span>
+                            <span class="rating">
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star"></i>
+                                <i className="fa fa-star-half-o"></i>
+                            </span>
+                            <span class="review-count">(27 Reviews)</span>
+                            <span class="badge">Popular</span>
+                        </div>
+                        <p>Do you know a senior or child who needs a helping hand to get things done around the house? I am certified to take care of patients suffering from Alzheimer’s, common illness, surgery, and hospitalization. We can help!</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 
+    <div id="review">
+        <div class="profile-reviews">
+
+            <div class="review-overview">
+                <h3>REVIEWS</h3>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+
+                    <span>(27 Reviews)</span>
+                </div>
+            </div>
+            <div class="list">
+                <div class="item item-avatar" href="#">
+                    <img src="http://i.ebayimg.com/00/s/MTkwWDE4MA==/z/3fQAAOSwwpdW8SEJ/$_35.JPG">
+                    <p>Back off, man. I'm a scientist.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                </div>
+                <div class="item item-avatar" href="#">
+                    <img src="http://i.ebayimg.com/00/s/MTkwWDE4MA==/z/3fQAAOSwwpdW8SEJ/$_35.JPG">
+                    
+                    <p>Back off, man. I'm a scientist.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                </div>
+                <div class="item item-avatar" href="#">
+                    <img src="http://i.ebayimg.com/00/s/MTkwWDE4MA==/z/3fQAAOSwwpdW8SEJ/$_35.JPG">
+                    
+                    <p>Back off, man. I'm a scientist.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                </div>
+                <div class="item item-avatar" href="#">
+                    <img src="http://i.ebayimg.com/00/s/MTkwWDE4MA==/z/3fQAAOSwwpdW8SEJ/$_35.JPG">
+                    
+                    <p>Back off, man. I'm a scientist.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="order-btn">
+        <a href="" class="Order Now">Order Now </a>
+    </div>
     <div id="description"></div>
-    <div id="about"></div>
+
     <div id="reviews"></div>
+
+    
 </body>
 <script src="browserify/bundle.js"></script>
 <script>
