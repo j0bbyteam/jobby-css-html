@@ -145,6 +145,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           }
       })
 
+      .state('tab.menu', {
+          url: '/menu',
+          views: {
+              'tab-dash': {
+                  templateUrl: 'js/account/templates/menu.html',
+                  controller: 'AccountCtrl'
+              }
+          }
+      })
+
+
   // Each tab has its own nav history stack:
 
   .state('tab.dash', {
