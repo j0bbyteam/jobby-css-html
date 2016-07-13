@@ -523,6 +523,52 @@ p, a {
     text-decoration: none;
     font-size: 17px; }
 
+.menu-page {
+  background: #4083FF; }
+
+.menu-user-header {
+  margin: 20px 15px 0;
+  padding: 0 5px 10px;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.5); }
+  .menu-user-header span {
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 17px;
+    margin-right: 10px;
+    color: #fff; }
+    .menu-user-header span.ob-sidemenu-cog {
+      float: right;
+      font-size: 14px !important;
+      margin: 17px 0; }
+    .menu-user-header span img {
+      max-width: 50px;
+      border-radius: 50%; }
+
+.menu-items {
+  margin: 0 15px; }
+  .menu-items li a {
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    font-family: 'chunkfiveroman';
+    color: #fff;
+    font-size: 16px;
+    position: relative; }
+    .menu-items li a span {
+      font-family: 'sfns_displayregular';
+      display: block;
+      font-size: 13px;
+      margin-top: 5px; }
+    .menu-items li a i {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      height: 20px; }
+  .menu-items li:last-child a {
+    border: none; }
+
 .search-list-header {
   height: 120px;
   background: #4083FF;
