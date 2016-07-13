@@ -155,6 +155,55 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           }
       })
 
+      .state('tab.my-services', {
+          url: '/my-services',
+          views: {
+              'tab-dash': {
+                  templateUrl: 'js/account/templates/my-services.html',
+                  controller: 'AccountCtrl'
+              }
+          }
+      })
+
+      .state('tab.my-bookings', {
+          url: '/my-bookings',
+          views: {
+              'tab-dash': {
+                  templateUrl: 'js/account/templates/my-bookings.html',
+                  controller: 'AccountCtrl'
+              }
+          }
+      })
+
+      .state('tab.service-detail', {
+          url: '/service-detail',
+          views: {
+              'tab-dash': {
+                  templateUrl: 'js/account/templates/service-detail.html',
+                  controller: 'AccountCtrl'
+              }
+          }
+      })
+
+      .state('tab.my-schedule', {
+          url: '/my-schedule',
+          views: {
+              'tab-dash': {
+                  templateUrl: 'js/account/templates/my-schedule.html',
+                  controller: 'AccountCtrl'
+              }
+          }
+      })
+
+      .state('tab.manage-schedule', {
+          url: '/manage-schedule',
+          views: {
+              'tab-dash': {
+                  templateUrl: 'js/account/templates/manage-schedule.html',
+                  controller: 'AccountCtrl'
+              }
+          }
+      })
 
   // Each tab has its own nav history stack:
 
