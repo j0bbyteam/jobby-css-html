@@ -731,3 +731,275 @@ p,a {
 		}
 	}
 }
+
+
+.schedule-date-tab {
+	background: rgba(0,0,0,0.05);
+	margin: 5px 0;
+    padding: 5px 10px;
+
+	p {
+		display: inline-block;
+		margin: 0;
+		color: #878787;
+		span {
+			color: #000;
+		}
+	}
+	.icons {
+		float: right;
+		a {
+			color: $blue;
+			margin-left: 10px;
+			display: inline-block;
+			font-size: 16px;
+
+		}
+	}
+}
+
+.open-schedule-item {
+	position: relative;
+	margin: 0 10px;
+	padding: 15px 0;
+	border-bottom: 1px solid #E0E0E0;
+	.slot {
+		font-size: 17px;
+		color: $blue;
+	}
+	.services {
+		margin: 10px 0;
+		li {
+			display: inline-block;
+			color: rgba(0,0,0,0.5);
+			font-size: 14px;
+			padding-left: 5px;
+			&:before {
+				content: "\f111";
+				font: normal normal normal 6px/1 FontAwesome;
+				left: -4px;
+			    position: relative;
+			    top: -2px;
+			}
+		}
+	}
+	.badges {
+		display: inline-block;
+		span {
+			display: inline-block;
+			background: #00d171;
+			color: #fff;
+			font-size: 10px;
+			&.orange {
+				background: #B05200;
+			}
+		}
+	}
+	.days {
+		display: inline-block;
+		span {
+			border-radius: 50%;
+		    color: #000;
+		    display: inline-block;
+		    font-size: 10px;
+		    height: 20px;
+		    text-align: center;
+		    width: 20px;
+			&.dark {
+				background: $blue;
+				color: $white;
+			}
+			&.light {
+				background: #7FBCFF;
+				color: $white;
+			}
+		}
+	}
+	.remove {
+		position: absolute;
+		right: 0;
+		top: 20px;
+		font-size: 15px;
+		color: #585858;
+	}
+}
+
+.booked-schedule-item {
+	margin: 10px 10px 20px;
+	.time {
+		font-size: 12px;
+		color: #A8A8AD;
+	}
+	.services-booked {
+		li {
+			background: rgba(0,122,255,0.3);
+			border-radius: 5px;
+			padding: 15px;
+			margin-bottom: 10px;
+			h2 {
+				display: inline-block;
+				font-size: 15px;
+				margin: 0 10px 0 0;
+			}
+		}
+	}
+}
+
+.from-to {
+	padding: 10px;
+	border-bottom: 1px solid #E0E0E0;
+	ul {
+		overflow: hidden;
+		li {
+			float: left;
+			width: 50%;
+			font-size: 13px;
+			span {
+				display: block;
+				font-size: 18px;
+				color: #000;
+			}
+		}
+	}
+}
+.available-service-selection {
+	margin: 10px 10px 30px;
+	p {
+		font-size: 13px;
+	}
+	.item {
+		border-width: 0 0 1px 0;
+		margin: 0;
+	}
+	.item-content {
+		font-family: 'chunkfiveroman';
+		font-size: 18px;
+	}
+}
+
+.repeat-schedule {
+	margin: 10px 10px 30px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #E0E0E0;
+	ul {
+		margin-bottom: 10px;
+		li {
+			border: none;
+			font-size: 16px;
+			padding-left: 0;
+		}
+	}
+	.days {
+		margin: 10px 0;
+		span {
+			border-radius: 50%;
+		    color: #000;
+		    display: inline-block;
+		    font-size: 13px;
+		    height: 36px;
+		    text-align: center;
+		    width: 36px;
+		    padding: 8px 0;
+			&.dark {
+				background: $blue;
+				color: $white;
+			}
+			&.light {
+				background: #7FBCFF;
+				color: $white;
+			}
+		}
+	}
+	p {
+		span {
+			display: inline-block;
+			margin-right: 5px;
+			font-size: 13px;
+			color: #9C9C9C;
+
+			&.dark { 
+				color: $blue;
+			}
+			&.light {
+				color: #7FBCFF;
+			}
+			&.gray {
+				color: #666666;
+			}
+		}
+	}
+}
+
+.prime-rate {
+	margin: 0 10px 30px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #E0E0E0;
+	ul {
+		margin-bottom: 10px;
+		li {
+			border: none;
+			font-size: 16px;
+			padding-left: 0;
+		}
+	}
+	p {
+		font-size: 13px;
+		color: #9C9C9C;
+		a {
+			color: $blue;
+		}
+	}
+}
+.set-slots {
+	margin: 10px;
+	p {
+		margin: 0;
+		color: #A8A8AD;
+		font-size: 12px;
+	}
+	.slot-item {
+		position: relative;
+		padding: 15px 0;
+		border-bottom: 1px solid #E0E0E0;
+		.slot {
+			font-size: 17px;
+			color: $blue;
+		}
+		.services {
+			
+			li {
+				display: inline-block;
+				color: rgba(0,0,0,0.5);
+				font-size: 14px;
+				padding-left: 5px;
+				&:before {
+					content: "\f111";
+					font: normal normal normal 6px/1 FontAwesome;
+					left: -4px;
+				    position: relative;
+				    top: -2px;
+				}
+			}
+		}
+		.badges {
+			margin: 10px 0;
+			span {
+				display: inline-block;
+				background: #00d171;
+				color: #fff;
+				font-size: 10px;
+				&.orange {
+					background: #B05200;
+				}
+			}
+		}
+		.remove {
+			position: absolute;
+			right: 0;
+			top: 20px;
+			font-size: 15px;
+			color: #585858;
+		}
+	}
+
+}

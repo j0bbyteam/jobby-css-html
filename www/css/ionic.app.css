@@ -569,6 +569,212 @@ p, a {
   .menu-items li:last-child a {
     border: none; }
 
+.schedule-date-tab {
+  background: rgba(0, 0, 0, 0.05);
+  margin: 5px 0;
+  padding: 5px 10px; }
+  .schedule-date-tab p {
+    display: inline-block;
+    margin: 0;
+    color: #878787; }
+    .schedule-date-tab p span {
+      color: #000; }
+  .schedule-date-tab .icons {
+    float: right; }
+    .schedule-date-tab .icons a {
+      color: #4083FF;
+      margin-left: 10px;
+      display: inline-block;
+      font-size: 16px; }
+
+.open-schedule-item {
+  position: relative;
+  margin: 0 10px;
+  padding: 15px 0;
+  border-bottom: 1px solid #E0E0E0; }
+  .open-schedule-item .slot {
+    font-size: 17px;
+    color: #4083FF; }
+  .open-schedule-item .services {
+    margin: 10px 0; }
+    .open-schedule-item .services li {
+      display: inline-block;
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 14px;
+      padding-left: 5px; }
+      .open-schedule-item .services li:before {
+        content: "\f111";
+        font: normal normal normal 6px/1 FontAwesome;
+        left: -4px;
+        position: relative;
+        top: -2px; }
+  .open-schedule-item .badges {
+    display: inline-block; }
+    .open-schedule-item .badges span {
+      display: inline-block;
+      background: #00d171;
+      color: #fff;
+      font-size: 10px; }
+      .open-schedule-item .badges span.orange {
+        background: #B05200; }
+  .open-schedule-item .days {
+    display: inline-block; }
+    .open-schedule-item .days span {
+      border-radius: 50%;
+      color: #000;
+      display: inline-block;
+      font-size: 10px;
+      height: 20px;
+      text-align: center;
+      width: 20px; }
+      .open-schedule-item .days span.dark {
+        background: #4083FF;
+        color: #fff; }
+      .open-schedule-item .days span.light {
+        background: #7FBCFF;
+        color: #fff; }
+  .open-schedule-item .remove {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    font-size: 15px;
+    color: #585858; }
+
+.booked-schedule-item {
+  margin: 10px 10px 20px; }
+  .booked-schedule-item .time {
+    font-size: 12px;
+    color: #A8A8AD; }
+  .booked-schedule-item .services-booked li {
+    background: rgba(0, 122, 255, 0.3);
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px; }
+    .booked-schedule-item .services-booked li h2 {
+      display: inline-block;
+      font-size: 15px;
+      margin: 0 10px 0 0; }
+
+.from-to {
+  padding: 10px;
+  border-bottom: 1px solid #E0E0E0; }
+  .from-to ul {
+    overflow: hidden; }
+    .from-to ul li {
+      float: left;
+      width: 50%;
+      font-size: 13px; }
+      .from-to ul li span {
+        display: block;
+        font-size: 18px;
+        color: #000; }
+
+.available-service-selection {
+  margin: 10px 10px 30px; }
+  .available-service-selection p {
+    font-size: 13px; }
+  .available-service-selection .item {
+    border-width: 0 0 1px 0;
+    margin: 0; }
+  .available-service-selection .item-content {
+    font-family: 'chunkfiveroman';
+    font-size: 18px; }
+
+.repeat-schedule {
+  margin: 10px 10px 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #E0E0E0; }
+  .repeat-schedule ul {
+    margin-bottom: 10px; }
+    .repeat-schedule ul li {
+      border: none;
+      font-size: 16px;
+      padding-left: 0; }
+  .repeat-schedule .days {
+    margin: 10px 0; }
+    .repeat-schedule .days span {
+      border-radius: 50%;
+      color: #000;
+      display: inline-block;
+      font-size: 13px;
+      height: 36px;
+      text-align: center;
+      width: 36px;
+      padding: 8px 0; }
+      .repeat-schedule .days span.dark {
+        background: #4083FF;
+        color: #fff; }
+      .repeat-schedule .days span.light {
+        background: #7FBCFF;
+        color: #fff; }
+  .repeat-schedule p span {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 13px;
+    color: #9C9C9C; }
+    .repeat-schedule p span.dark {
+      color: #4083FF; }
+    .repeat-schedule p span.light {
+      color: #7FBCFF; }
+    .repeat-schedule p span.gray {
+      color: #666666; }
+
+.prime-rate {
+  margin: 0 10px 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #E0E0E0; }
+  .prime-rate ul {
+    margin-bottom: 10px; }
+    .prime-rate ul li {
+      border: none;
+      font-size: 16px;
+      padding-left: 0; }
+  .prime-rate p {
+    font-size: 13px;
+    color: #9C9C9C; }
+    .prime-rate p a {
+      color: #4083FF; }
+
+.set-slots {
+  margin: 10px; }
+  .set-slots p {
+    margin: 0;
+    color: #A8A8AD;
+    font-size: 12px; }
+  .set-slots .slot-item {
+    position: relative;
+    padding: 15px 0;
+    border-bottom: 1px solid #E0E0E0; }
+    .set-slots .slot-item .slot {
+      font-size: 17px;
+      color: #4083FF; }
+    .set-slots .slot-item .services li {
+      display: inline-block;
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 14px;
+      padding-left: 5px; }
+      .set-slots .slot-item .services li:before {
+        content: "\f111";
+        font: normal normal normal 6px/1 FontAwesome;
+        left: -4px;
+        position: relative;
+        top: -2px; }
+    .set-slots .slot-item .badges {
+      margin: 10px 0; }
+      .set-slots .slot-item .badges span {
+        display: inline-block;
+        background: #00d171;
+        color: #fff;
+        font-size: 10px; }
+        .set-slots .slot-item .badges span.orange {
+          background: #B05200; }
+    .set-slots .slot-item .remove {
+      position: absolute;
+      right: 0;
+      top: 20px;
+      font-size: 15px;
+      color: #585858; }
+
 .search-list-header {
   height: 120px;
   background: #4083FF;

@@ -1,4 +1,220 @@
 <ion-view view-title="Schedule">
     <ion-content>
+       <div class="view-head">
+          <span class="option-left">Back</a></span>
+          <span class="title">My Schedule</span>
+        </div>
+
+		<ul class="profile-tabs">
+			<li>
+				<a class="active" href="#">Open</a>
+			</li>
+			<li>
+				<a href="#">Booked</a>
+			</li>
+		</ul>
+
+		<div class="schedule-date-tab">
+			<p><span>23</span> June 2016</p>
+			<div class="icons">
+				<a href=""><i class="fa fa-plus"></i></a>
+				<a href=""><i class="fa fa-calendar"></i></a>
+			</div>
+		</div>
+
+		<div class="open-schedule-list">
+			<div class="open-schedule-item">
+				<a href="" class="remove"><i class="fa fa-times"></i></a>
+				<div class="slot">9:00AM - 1:00PM</div>
+				<ul class="services">
+					<li>Dog Walker</li>
+					<li>Senior Care</li>
+					<li>Child Care</li>
+				</ul>
+				<div class="badges">
+					<span class="badge orange">PRIME RATE</span>
+					<span class="badge green">REPEAT</span>
+				</div>
+				<div class="days">
+					<span class="dark">S</span>
+					<span class="light">M</span>
+					<span>T</span>
+					<span>W</span>
+					<span>T</span>
+					<span>F</span>
+					<span class="dark">S</span>
+				</div>
+			</div>
+
+			<div class="open-schedule-item">
+				<a href="" class="remove"><i class="fa fa-times"></i></a>
+				<div class="slot">9:00AM - 1:00PM</div>
+				<ul class="services">
+					<li>Dog Walker</li>
+					<li>Senior Care</li>
+					<li>Child Care</li>
+				</ul>
+				<div class="badges">
+					<span class="badge orange">PRIME RATE</span>
+					<span class="badge green">REPEAT</span>
+				</div>
+				<div class="days">
+					<span class="dark">S</span>
+					<span class="light">M</span>
+					<span>T</span>
+					<span>W</span>
+					<span>T</span>
+					<span>F</span>
+					<span class="dark">S</span>
+				</div>
+			</div>
+
+			<div class="open-schedule-item">
+				<a href="" class="remove"><i class="fa fa-times"></i></a>
+				<div class="slot">9:00AM - 1:00PM</div>
+				<ul class="services">
+					<li>Dog Walker</li>
+					<li>Senior Care</li>
+					<li>Child Care</li>
+				</ul>
+				<div class="badges">
+					<span class="badge orange">PRIME RATE</span>
+					<span class="badge green">REPEAT</span>
+				</div>
+				<div class="days">
+					<span class="dark">S</span>
+					<span class="light">M</span>
+					<span>T</span>
+					<span>W</span>
+					<span>T</span>
+					<span>F</span>
+					<span class="dark">S</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="booked-schedule-list">
+			<div class="booked-schedule-item">
+				<div class="time">9:00AM - 10:00AM</div>
+				<ul class="services-booked">
+					<li>
+						<h2>Dog Walker</h2>
+						<span>Fransis Han</span>
+					</li>
+					<li>
+						<h2>Dog Walker</h2>
+						<span>Fransis Han</span>
+					</li>
+				</ul>
+			</div>
+			<div class="booked-schedule-item">
+				<div class="time">12:00AM - 10:00AM</div>
+				<ul class="services-booked">
+					<li>
+						<h2>Dog Walker</h2>
+						<span>Fransis Han</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="set-schedule">
+
+			<div class="from-to">
+				<ul>
+					<li>FROM<span>3:00 PM</span></li>
+					<li>To<span>9:00 PM</span></li>
+				</ul>
+			</div>
+			<div class="available-service-selection">
+				<p>Available services at this time</p>
+				<ion-list>
+					<ion-checkbox ng-model="filter.red">Dog Walker </ion-checkbox>
+					<ion-checkbox ng-model="filter.yellow">Child Care</ion-checkbox>
+				</ion-list>
+			</div>
+
+			<div class="repeat-schedule">
+				<ul class="list">
+					<li class="item item-toggle">
+						Repeat schedule
+						<label class="toggle toggle-balanced">
+							<input type="checkbox">
+							<div class="track">
+								<div class="handle"></div>
+							</div>
+						</label>
+					</li>
+				</ul>
+				<div class="days">
+					<span class="dark">S</span>
+					<span class="light">M</span>
+					<span>T</span>
+					<span>W</span>
+					<span>T</span>
+					<span>F</span>
+					<span class="dark">S</span>
+				</div>
+				<p><span>Keep as </span> <span class="dark">Prime Rate</span> <span class="light">Regular Rate</span> <span class="gray">Not Available</span></p>
+			</div>
+
+			<div class="prime-rate">
+				<ul class="list">
+					<li class="item item-toggle">
+						Prime rate price
+						<label class="toggle toggle-balanced">
+							<input type="checkbox">
+							<div class="track">
+								<div class="handle"></div>
+							</div>
+						</label>
+					</li>
+				</ul>
+				<p>Services selected will be priced differently for this time. To change prime rate price go to <a href="">My Services.</a></p>
+			</div>
+
+			<div class="set-slots">
+				<p>Set time slots for this date</p>
+				<div class="slot-item">
+					<a href="" class="remove"><i class="fa fa-times"></i></a>
+					<div class="slot">9:00AM - 1:00PM</div>
+					<div class="badges">
+						<span class="badge orange">PRIME RATE</span>
+						<span class="badge green">REPEAT</span>
+					</div>
+					<ul class="services">
+						<li>Dog Walker</li>
+						<li>Senior Care</li>
+						<li>Child Care</li>
+					</ul>
+				</div>
+				<div class="slot-item">
+					<a href="" class="remove"><i class="fa fa-times"></i></a>
+					<div class="slot">9:00AM - 1:00PM</div>
+					<div class="badges">
+						<span class="badge orange">PRIME RATE</span>
+						<span class="badge green">REPEAT</span>
+					</div>
+					<ul class="services">
+						<li>Dog Walker</li>
+						<li>Senior Care</li>
+						<li>Child Care</li>
+					</ul>
+				</div>
+				<div class="slot-item">
+					<a href="" class="remove"><i class="fa fa-times"></i></a>
+					<div class="slot">9:00AM - 1:00PM</div>
+					<div class="badges">
+						<span class="badge orange">PRIME RATE</span>
+						<span class="badge green">REPEAT</span>
+					</div>
+					<ul class="services">
+						<li>Dog Walker</li>
+						<li>Senior Care</li>
+						<li>Child Care</li>
+					</ul>
+				</div>
+			</div>
+		</div>
     </ion-content>
 </ion-view>
