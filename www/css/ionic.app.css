@@ -585,7 +585,8 @@ p, a {
       color: #4083FF;
       margin-left: 10px;
       display: inline-block;
-      font-size: 16px; }
+      font-size: 16px;
+      text-decoration: none; }
 
 .open-schedule-item {
   position: relative;
@@ -644,7 +645,8 @@ p, a {
   margin: 10px 10px 20px; }
   .booked-schedule-item .time {
     font-size: 12px;
-    color: #A8A8AD; }
+    color: #A8A8AD;
+    margin-bottom: 10px; }
   .booked-schedule-item .services-booked li {
     background: rgba(0, 122, 255, 0.3);
     border-radius: 5px;
@@ -1035,3 +1037,46 @@ p, a {
       .edit-services .photo-preview ul li:first-child a {
         border-color: #4083FF;
         color: #4083FF; }
+
+.map {
+  text-align: center; }
+  .map img {
+    max-width: 100%;
+    width: auto; }
+
+.qr-code {
+  text-align: center; }
+  .qr-code p {
+    font-size: 13px;
+    margin: 10px; }
+  .qr-code img {
+    max-width: 100%;
+    width: auto; }
+
+.review {
+  text-align: center;
+  margin: 20px 0; }
+  .review p {
+    font-size: 22px;
+    color: #434343;
+    margin: 10px 0 0; }
+  .review span {
+    display: block;
+    font-size: 15px;
+    color: #434343; }
+
+.feedback {
+  text-align: center;
+  margin: 20px 0; }
+  .feedback p {
+    font-size: 16px;
+    color: #000; }
+  .feedback span {
+    display: block;
+    color: #B7B7B7;
+    font-size: 15px;
+    margin: 0 0 20px; }
+  .feedback textarea {
+    resize: none;
+    width: 100%;
+    padding: 20px; }

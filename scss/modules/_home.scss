@@ -753,7 +753,7 @@ p,a {
 			margin-left: 10px;
 			display: inline-block;
 			font-size: 16px;
-
+			text-decoration: none;
 		}
 	}
 }
@@ -829,6 +829,7 @@ p,a {
 	.time {
 		font-size: 12px;
 		color: #A8A8AD;
+		margin-bottom: 10px;
 	}
 	.services-booked {
 		li {
@@ -1335,5 +1336,61 @@ p,a {
 				}
 			}
 		}
+	}
+}
+
+.map {
+	text-align: center;
+	img {
+		max-width: 100%;
+		width: auto;
+	}
+}
+
+.qr-code {
+	text-align: center;
+	p {
+		font-size: 13px;
+		margin: 10px;
+	}
+	img {
+		max-width: 100%;
+		width: auto;
+	}
+}
+
+.review {
+	text-align: center;
+	margin: 20px 0;
+	p {
+		font-size: 22px;
+		color: #434343;
+		margin: 10px 0 0;
+	}
+	span {
+		display: block;
+		font-size: 15px;
+		color: #434343;
+	}
+}
+
+.feedback {
+	text-align: center;
+	margin: 20px 0;
+	p {
+		font-size: 16px;
+		color: #000;
+	}
+	span {
+		display: block;
+		color: #B7B7B7;
+		font-size: 15px;
+		margin: 0 0 20px;
+	}
+
+	textarea {
+		resize: none;
+		width: 100%;
+		padding: 20px;
 	}
 }
