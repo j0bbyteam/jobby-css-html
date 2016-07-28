@@ -927,3 +927,111 @@ p, a {
       height: 28px; }
     .tabs .tab-item .tab-title {
       font-size: 10px; }
+
+.service-list p {
+  color: rgba(0, 0, 0, 0.5);
+  margin: 10px 0 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #E0E0E0; }
+
+.service-list ul li {
+  margin-bottom: 0; }
+  .service-list ul li a {
+    display: block;
+    position: relative;
+    font-size: 19px;
+    color: #000;
+    border-bottom: 1px solid #E0E0E0;
+    text-decoration: none;
+    padding: 20px 0; }
+    .service-list ul li a i {
+      position: absolute;
+      right: 10px; }
+
+.edit-services .service-title {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.6); }
+
+.edit-services .form-element {
+  position: relative; }
+  .edit-services .form-element span {
+    position: absolute;
+    right: 0;
+    top: 7px;
+    color: #4083FF;
+    font-size: 18px;
+    width: 70px; }
+    .edit-services .form-element span i {
+      color: #929292;
+      display: inline-block;
+      margin-right: 10px; }
+
+.edit-services .service-name {
+  border-top: 1px solid #E0E0E0;
+  padding: 10px;
+  margin-top: 20px; }
+  .edit-services .service-name p {
+    font-size: 18px;
+    margin: 10px 0; }
+
+.edit-services .service-desc {
+  border-top: 1px solid #E0E0E0;
+  padding: 10px; }
+  .edit-services .service-desc p {
+    font-size: 18px;
+    margin: 10px 0; }
+
+.edit-services .duration {
+  border-top: 1px solid #E0E0E0;
+  padding: 10px; }
+
+.edit-services .rate {
+  border-top: 1px solid #E0E0E0;
+  padding: 10px; }
+
+.edit-services .slot {
+  border-top: 1px solid #E0E0E0;
+  padding: 10px; }
+
+.edit-services .photo {
+  border-top: 1px solid #E0E0E0;
+  padding: 10px; }
+  .edit-services .photo span {
+    font-size: 13px;
+    color: #9C9C9C;
+    display: block;
+    text-align: right; }
+
+.edit-services .photo-preview {
+  margin: 10px 0; }
+  .edit-services .photo-preview ul {
+    text-align: center; }
+    .edit-services .photo-preview ul li {
+      display: inline-block;
+      width: 23%;
+      vertical-align: top; }
+      .edit-services .photo-preview ul li p {
+        font-size: 13px;
+        color: rgba(0, 0, 0, 0.6);
+        margin: 10px 0; }
+      .edit-services .photo-preview ul li a {
+        border: 1px dashed #e0e0e0;
+        border-radius: 5px;
+        display: block;
+        height: 80px;
+        padding: 10px;
+        text-decoration: none;
+        width: 70px;
+        position: relative;
+        color: #e0e0e0; }
+        .edit-services .photo-preview ul li a i {
+          bottom: 0;
+          height: 12px;
+          left: 0;
+          margin: auto;
+          position: absolute;
+          right: 0;
+          top: 0; }
+      .edit-services .photo-preview ul li:first-child a {
+        border-color: #4083FF;
+        color: #4083FF; }
