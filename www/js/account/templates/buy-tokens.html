@@ -1,12 +1,61 @@
 <ion-view view-title="Buy Credits">
     <ion-content class="ob-page">
+        <div class="view-head">
+          <span class="option-left">Back</a></span>
+          <span class="title">Buy Credit</span>
+        </div>
+
+        <div class="buycredit">
+            <div class="credit-header">
+                <p>Select the number of credits to purchase</p>
+                <span>You have 0 credits left</span>
+            </div>
+
+            <ul class="credit-list">
+                <li>
+                    <input type="text" name="" value="20">
+                    <div class="btns">
+                        <a href=""><i class="ion-ios-plus"></i></a>
+                        <a href=""><i class="ion-ios-minus"></i></a>
+                    </div>
+                </li>
+                <li>
+                    <input type="text" name="" value="10">
+                    <div class="btns">
+                        <a href=""><i class="ion-ios-plus"></i></a>
+                        <a href=""><i class="ion-ios-minus"></i></a>
+                    </div>
+                </li>
+                <li>
+                    <input type="text" name="" value="5">
+                    <div class="btns">
+                        <a href=""><i class="ion-ios-plus"></i></a>
+                        <a href=""><i class="ion-ios-minus"></i></a>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="credit-learn">
+                <p>5 Credits is typically one order</p>
+                <a href="" title="Learn More">Learn More</a>
+            </div>
+
+            <div class="credit-footer">
+                <span class="credit-count">25</span>
+                <a href="">
+                    <span class="credit-total">$0 <i>TOTAL</i></span>
+                    <span>Buy Credits</span>
+                </a>
+            </div>
+        </div>
+        <!--
         <div class="ob-content buy-tokens-content-div">
             <div class="ob-main-instructions ob-instructions-light">Select the number of credits to purchase</div>
             <div class="ob-sub-instructions ob-instructions-light">You have <span class="text-bold">{{currentTokens}}</span> dollars left.</div>
             <div class="purchase-credits-table">
                 <div class="purchase-credits-row" ng-repeat="item in bundles">
                     <span class="purchase-credits-value">{{item.numberTokens}}</span>
-                    <!--<span class="purchase-credits-count">${{item.price}}</span>-->
+                    <span class="purchase-credits-count">${{item.price}}</span>
                     <span class="purchase-credits-plus-minus-container" ng-click="addBundle(item)">
                         <span class="purchase-credits-plus-minus-white-background"></span>
                         <i class="icon ion-plus-circled purchase-credits-plus"></i>
@@ -18,7 +67,9 @@
                 </div>
             </div>
         </div>
+        -->
     </ion-content>
+    <!--
     <ion-footer-bar class="purchase-credits-footer-button">
         <span class="purchase-credits-value">{{totalTokens}}</span>
         <span class="purchase-credits-total-text">Total ${{amount}}</span>
@@ -27,6 +78,7 @@
             <span class="purchase-credits-arrow"></span>
         </span>
     </ion-footer-bar>
+    -->
 </ion-view>
 
 <!-- ng-click="clear()" -->

@@ -1080,3 +1080,194 @@ p, a {
     resize: none;
     width: 100%;
     padding: 20px; }
+
+.request-menu {
+  margin: 0 10px; }
+  .request-menu li a {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    margin: 0; }
+    .request-menu li a i {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 10px;
+      margin: auto;
+      height: 20px; }
+
+.location-list {
+  margin: 0 10px 20px; }
+  .location-list li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+    .location-list li a {
+      color: #000;
+      font-size: 15px;
+      font-weight: 700;
+      display: block;
+      text-decoration: none; }
+      .location-list li a span {
+        display: block;
+        font-weight: normal;
+        font-size: 13px; }
+    .location-list li:last-child {
+      border: none; }
+
+.location-comments .input-label {
+  color: rgba(0, 0, 0, 0.6);
+  max-width: 100%;
+  width: 100%;
+  font-size: 14px; }
+
+.location-comments label {
+  white-space: normal; }
+
+.selected-location {
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  margin: 0 10px; }
+  .selected-location p {
+    color: #000;
+    font-size: 15px;
+    font-weight: 700;
+    display: block;
+    text-decoration: none;
+    padding: 0 10px; }
+    .selected-location p span {
+      display: block;
+      font-weight: normal;
+      font-size: 13px; }
+  .selected-location a {
+    text-decoration: none;
+    position: absolute;
+    right: 10px;
+    top: 10px; }
+
+.edit-profile .profile-title {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 13px; }
+
+.edit-profile .username {
+  border-top: 1px solid #e0e0e0;
+  margin-top: 20px;
+  padding: 10px; }
+
+.edit-profile .profession {
+  border-top: 1px solid #e0e0e0;
+  padding: 10px; }
+
+.edit-profile .bio {
+  border-top: 1px solid #e0e0e0;
+  padding: 10px; }
+  .edit-profile .bio textarea {
+    width: 100%;
+    resize: none;
+    height: 90px; }
+
+.edit-profile .social {
+  border-top: 1px solid #e0e0e0;
+  padding: 10px; }
+
+.edit-profile .terms {
+  border-top: 1px solid #e0e0e0;
+  padding: 10px; }
+
+.edit-profile .signout {
+  margin: 20px 0; }
+  .edit-profile .signout a {
+    display: block;
+    background: #f6f6f6;
+    color: red;
+    text-decoration: none;
+    padding: 12px;
+    text-align: center; }
+
+.edit-profile .profile-pic {
+  border-top: 1px solid #e0e0e0;
+  padding: 10px;
+  position: relative; }
+  .edit-profile .profile-pic .profile-title-big {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px; }
+  .edit-profile .profile-pic ul {
+    display: inline-block;
+    vertical-align: middle; }
+    .edit-profile .profile-pic ul li img {
+      border-radius: 50%; }
+  .edit-profile .profile-pic a {
+    position: absolute;
+    right: 20px;
+    text-decoration: none;
+    top: 35px; }
+
+.credit-header {
+  text-align: center; }
+  .credit-header p {
+    font-size: 16px;
+    color: #000;
+    margin: 20px 0; }
+  .credit-header span {
+    display: block;
+    font-size: 13px;
+    color: #999999;
+    margin: 20px 0; }
+
+.credit-list {
+  padding: 0 15px; }
+  .credit-list li {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 0; }
+    .credit-list li input {
+      width: 40px;
+      display: inline-block;
+      border: 1px solid #000;
+      padding: 10px;
+      vertical-align: middle;
+      text-align: center; }
+    .credit-list li .btns {
+      display: inline-block;
+      vertical-align: middle;
+      float: right; }
+      .credit-list li .btns a {
+        display: inline-block; }
+        .credit-list li .btns a i {
+          font-size: 42px;
+          margin-right: 10px;
+          color: rgba(111, 111, 111, 0.1); }
+          .credit-list li .btns a i.ion-ios-plus {
+            color: #4083FF; }
+
+.credit-learn {
+  background: #f9f9f9;
+  padding: 30px;
+  text-align: center;
+  margin: 20px 0; }
+  .credit-learn p {
+    font-size: 14px;
+    color: #000; }
+  .credit-learn a {
+    display: inline-block;
+    text-decoration: none;
+    color: #4083FF;
+    font-size: 16px; }
+
+.credit-footer {
+  background: #4083FF;
+  color: #fff; }
+  .credit-footer .credit-count {
+    background: rgba(255, 255, 255, 0.25);
+    padding: 15px;
+    display: inline-block;
+    font-size: 16px; }
+  .credit-footer a {
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 700; }
+    .credit-footer a .credit-total {
+      margin: 0 100px 0 10px; }
+      .credit-footer a .credit-total i {
+        font-size: 12px;
+        font-weight: 400; }

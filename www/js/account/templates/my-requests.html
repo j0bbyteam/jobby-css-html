@@ -1,5 +1,39 @@
 <ion-view view-title="My Requests">
-    <ion-nav-buttons side="left">
+	<ion-content>
+		
+		<div class="view-head">
+	      <span class="option-left">Back</a></span>
+	      <span class="title">My Requests</span>
+	    </div>
+
+	    <ul class="profile-tabs">
+			<li>
+				<a href="#">Inbox</a>
+			</li>
+			<li>
+				<a class="active" href="#">Sent</a>
+			</li>
+		</ul>
+
+		<ul class="request-menu">
+            <li>
+                <a class="item ob-sidemenu-tab">Request 1<i class="ion-chevron-right"></i></a>
+            </li>
+            <li>
+                <a class="item ob-sidemenu-tab">Request 2<i class="ion-chevron-right"></i></a>
+            </li>
+            <li>
+                <a class="item ob-sidemenu-tab">Request 3<i class="ion-chevron-right"></i></a>
+            </li>
+            <li>
+                <a class="item ob-sidemenu-tab">Request 4<i class="ion-chevron-right"></i></a>
+            </li>
+        </ul>
+
+    </ion-content>
+
+
+    <!--<ion-nav-buttons side="left">
         <button class="button button-icon ion-document-text"
                 ng-click="goTo('#/menu/my-transactions///')"></button>
     </ion-nav-buttons>
@@ -14,12 +48,7 @@
                         ng-click="rootGoTo('menu.requested-sessions')">Inbox</button>
                 <button class="ob-block-switch2-button ob-block-switch2-button-selected">Sent</button>
             </div>
-            <!--<ion-scroll class="ob-block ob-scroll ob-scroll-light ob-section-1z" direction="y">-->
-                <!--<div ng-show="requests.length <= 0" class="ob-scroll-emptytext">-->
-                    <!--You have made no requests!<br/><br/>-->
-                    <!--Some service providers can travel to your location.<br/><br/>-->
-                    <!--Tap the + at the top right to make a request now!-->
-                <!--</div>-->
+            
                 <a class="ob-scroll-row" ng-repeat="item in requests | orderBy: '-created'">
                     <div class="ob-scroll-col-img" ng-click="pay(item)">
                         <img class="ob-scroll-img"
@@ -39,7 +68,8 @@
                         </div>
                     </div>
                 </a>
-            <!--</ion-scroll>-->
+
         </div>
     </ion-content>
+    -->
 </ion-view>
