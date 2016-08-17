@@ -527,8 +527,11 @@ p, a {
   background: #4083FF; }
 
 .menu-user-header {
+  display: block;
+  height: auto;
   margin: 20px 15px 0;
   padding: 0 5px 10px;
+  width: auto;
   border-bottom: 1px dotted rgba(255, 255, 255, 0.5); }
   .menu-user-header span {
     vertical-align: middle;
@@ -541,7 +544,6 @@ p, a {
       font-size: 14px !important;
       margin: 17px 0; }
     .menu-user-header span img {
-      max-width: 50px;
       border-radius: 50%; }
 
 .menu-items {
@@ -549,11 +551,12 @@ p, a {
   .menu-items li a {
     background: none;
     border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
     font-family: 'chunkfiveroman';
     color: #fff;
     font-size: 16px;
-    position: relative; }
+    position: relative;
+    width: 100%; }
     .menu-items li a span {
       font-family: 'sfns_displayregular';
       display: block;
@@ -972,14 +975,14 @@ p, a {
   border-top: 1px solid #E0E0E0;
   padding: 10px;
   margin-top: 20px; }
-  .edit-services .service-name p {
+  .edit-services .service-name p, .edit-services .service-name input {
     font-size: 18px;
     margin: 10px 0; }
 
 .edit-services .service-desc {
   border-top: 1px solid #E0E0E0;
   padding: 10px; }
-  .edit-services .service-desc p {
+  .edit-services .service-desc p, .edit-services .service-desc textarea {
     font-size: 18px;
     margin: 10px 0; }
 
@@ -1007,11 +1010,18 @@ p, a {
 .edit-services .photo-preview {
   margin: 10px 0; }
   .edit-services .photo-preview ul {
-    text-align: center; }
+    text-align: center;
+    margin: 0 10px; }
     .edit-services .photo-preview ul li {
-      display: inline-block;
-      width: 23%;
-      vertical-align: top; }
+      box-sizing: border-box;
+      float: left;
+      margin-bottom: 15px;
+      padding-right: 5px;
+      vertical-align: top;
+      width: 25%; }
+      .edit-services .photo-preview ul li img {
+        max-width: 100%;
+        height: auto; }
       .edit-services .photo-preview ul li p {
         font-size: 13px;
         color: rgba(0, 0, 0, 0.6);
@@ -1023,7 +1033,7 @@ p, a {
         height: 80px;
         padding: 10px;
         text-decoration: none;
-        width: 70px;
+        width: 60px;
         position: relative;
         color: #e0e0e0; }
         .edit-services .photo-preview ul li a i {
@@ -1037,6 +1047,8 @@ p, a {
       .edit-services .photo-preview ul li:first-child a {
         border-color: #4083FF;
         color: #4083FF; }
+      .edit-services .photo-preview ul li:nth-child(4n+1) {
+        clear: left; }
 
 .map {
   text-align: center; }

@@ -676,8 +676,11 @@ p,a {
 	background: $blue;
 }
 .menu-user-header {
-	margin: 20px 15px 0;
-	padding: 0 5px 10px;
+	display: block;
+    height: auto;
+    margin: 20px 15px 0;
+    padding: 0 5px 10px;
+    width: auto;
 	border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
 	span {
 		vertical-align: middle;
@@ -692,7 +695,6 @@ p,a {
 
 		}
 		img {
-			max-width: 50px;
 			border-radius: 50%;
 		}
 	}
@@ -703,11 +705,12 @@ p,a {
 		a {
 			background: none;
 			border: none;
-			border-bottom: 1px solid rgba(255,255,255,0.5);
+			border-bottom: 1px solid rgba(255,255,255,0.5) !important;
 			font-family: 'chunkfiveroman';
 			color: #fff;
 			font-size: 16px;
 			position: relative;
+			width: 100%;
 			span {
 				font-family: 'sfns_displayregular';
 				display: block;
@@ -1260,7 +1263,7 @@ p,a {
 		border-top: 1px solid #E0E0E0;
 		padding: 10px;
 		margin-top: 20px;
-		p {
+		p,input {
 			font-size: 18px;
 			margin: 10px 0;
 		}
@@ -1268,7 +1271,7 @@ p,a {
 	.service-desc {
 		border-top: 1px solid #E0E0E0;
 		padding: 10px;
-		p {
+		p,textarea {
 			font-size: 18px;
 			margin: 10px 0;
 		}
@@ -1280,6 +1283,9 @@ p,a {
 	.rate {
 		border-top: 1px solid #E0E0E0;
 		padding: 10px;
+		input {
+
+		}
 	}
 	.slot {
 		border-top: 1px solid #E0E0E0;
@@ -1299,10 +1305,18 @@ p,a {
 		margin: 10px 0;
 		ul {
 			text-align: center;
+			margin: 0 10px;
 			li {
-				display: inline-block;
-				width: 23%;
-				vertical-align: top;
+				box-sizing: border-box;
+			    float: left;
+			    margin-bottom: 15px;
+			    padding-right: 5px;
+			    vertical-align: top;
+			    width: 25%;
+				img {
+					max-width: 100%;
+					height: auto;
+				}
 				p {
 					font-size: 13px;
 					color: rgba(0,0,0,0.6);
@@ -1315,7 +1329,7 @@ p,a {
 				    height: 80px;
 				    padding: 10px;
 				    text-decoration: none;
-				    width: 70px;
+				    width: 60px;
 				    position: relative;
 				    color: #e0e0e0;
 				    i {
@@ -1333,6 +1347,9 @@ p,a {
 						border-color: $blue;
 						color: $blue;
 					}
+				}
+				&:nth-child(4n+1){
+					clear: left;
 				}
 			}
 		}
