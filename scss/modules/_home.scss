@@ -681,7 +681,6 @@ p,a {
     margin: 20px 15px 0;
     padding: 0 5px 10px;
     width: auto;
-	border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
 	span {
 		vertical-align: middle;
 		display: inline-block;
@@ -691,11 +690,13 @@ p,a {
 		&.ob-sidemenu-cog {
 		    float: right;
 		    font-size: 14px !important;
-		    margin: 17px 0;
+		    margin: 24px 0;
 
 		}
 		img {
 			border-radius: 50%;
+			width: 100%;
+    		max-width: 65px;
 		}
 	}
 }
@@ -726,10 +727,35 @@ p,a {
 				margin: auto;
 				height: 20px;
 			}
+			&.no-border {
+				border: none !important;
+			}
 		}
 		&:last-child {
 			a {
 				border: none;
+			}
+		}
+		&.menu-separator {
+			text-align: center;
+			color: #fff;
+			position: relative;
+			margin: 10px 0;
+			span {
+				&:before,&:after {
+					border-bottom: 1px dotted #fff;
+				    content: "";
+				    display: block;
+				    height: 2px;
+				    left: 0;
+				    position: absolute;
+				    top: 10px;
+				    width: 56px;
+				}
+				&:after {
+					right: 0;
+					left: auto;
+				}
 			}
 		}
 	}

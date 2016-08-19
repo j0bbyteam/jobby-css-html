@@ -531,8 +531,7 @@ p, a {
   height: auto;
   margin: 20px 15px 0;
   padding: 0 5px 10px;
-  width: auto;
-  border-bottom: 1px dotted rgba(255, 255, 255, 0.5); }
+  width: auto; }
   .menu-user-header span {
     vertical-align: middle;
     display: inline-block;
@@ -542,9 +541,11 @@ p, a {
     .menu-user-header span.ob-sidemenu-cog {
       float: right;
       font-size: 14px !important;
-      margin: 17px 0; }
+      margin: 24px 0; }
     .menu-user-header span img {
-      border-radius: 50%; }
+      border-radius: 50%;
+      width: 100%;
+      max-width: 65px; }
 
 .menu-items {
   margin: 0 15px; }
@@ -569,8 +570,27 @@ p, a {
       right: 0;
       margin: auto;
       height: 20px; }
+    .menu-items li a.no-border {
+      border: none !important; }
   .menu-items li:last-child a {
     border: none; }
+  .menu-items li.menu-separator {
+    text-align: center;
+    color: #fff;
+    position: relative;
+    margin: 10px 0; }
+    .menu-items li.menu-separator span:before, .menu-items li.menu-separator span:after {
+      border-bottom: 1px dotted #fff;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 0;
+      position: absolute;
+      top: 10px;
+      width: 56px; }
+    .menu-items li.menu-separator span:after {
+      right: 0;
+      left: auto; }
 
 .schedule-date-tab {
   background: rgba(0, 0, 0, 0.05);
